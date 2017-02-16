@@ -14,6 +14,7 @@
 		4717EF4F1E56607600C1144F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4717EF4D1E56607600C1144F /* LaunchScreen.storyboard */; };
 		4717EF5A1E56607600C1144F /* Straight_Outta_CastiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4717EF591E56607600C1144F /* Straight_Outta_CastiTests.swift */; };
 		4717EF651E56607600C1144F /* Straight_Outta_CastiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4717EF641E56607600C1144F /* Straight_Outta_CastiUITests.swift */; };
+		4717EF731E56609300C1144F /* Geofence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4717EF721E56609300C1144F /* Geofence.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		4717EF601E56607600C1144F /* Straight Outta CastiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Straight Outta CastiUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4717EF641E56607600C1144F /* Straight_Outta_CastiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Straight_Outta_CastiUITests.swift; sourceTree = "<group>"; };
 		4717EF661E56607600C1144F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4717EF721E56609300C1144F /* Geofence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Geofence.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				4717EF441E56607600C1144F /* AppDelegate.swift */,
+				4717EF721E56609300C1144F /* Geofence.swift */,
 				4717EF461E56607600C1144F /* ViewController.swift */,
 				4717EF481E56607600C1144F /* Main.storyboard */,
 				4717EF4B1E56607600C1144F /* Assets.xcassets */,
@@ -262,6 +265,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4717EF731E56609300C1144F /* Geofence.swift in Sources */,
 				4717EF471E56607600C1144F /* ViewController.swift in Sources */,
 				4717EF451E56607600C1144F /* AppDelegate.swift in Sources */,
 			);
