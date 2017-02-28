@@ -8,6 +8,8 @@
 
 import UIKit
 
+// kenzie is stupid 
+
 class ViewController: UIViewController {
 
 
