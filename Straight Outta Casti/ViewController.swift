@@ -8,6 +8,8 @@
 
 import UIKit
 
+// kenzie is stupid 
+
 class ViewController: UIViewController {
 
     let geofence: Geofence = Geofence(latitudeDeadband: Constants.Geolocation.latitudeDeadband, longitudeDeadband: Constants.Geolocation.longitudeDeadband, targetLatitude: Constants.Geolocation.castiLatitude, targetLongitude: Constants.Geolocation.castiLongitude)
