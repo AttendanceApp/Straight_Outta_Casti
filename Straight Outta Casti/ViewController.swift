@@ -8,9 +8,12 @@
 
 import UIKit
 
+// kenzie is stupid 
+
 class ViewController: UIViewController {
 
-    
+
+    //VANESSA: Are you kitten me right meow?
     // liz has made a comment
     let geofence: Geofence = Geofence(latitudeDeadband: Constants.Geolocation.latitudeDeadband, longitudeDeadband: Constants.Geolocation.longitudeDeadband, targetLatitude: Constants.Geolocation.castiLatitude, targetLongitude: Constants.Geolocation.castiLongitude)
     
@@ -23,7 +26,5 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
 }
 
