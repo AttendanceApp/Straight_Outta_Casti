@@ -16,6 +16,7 @@
 		4717EF651E56607600C1144F /* Straight_Outta_CastiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4717EF641E56607600C1144F /* Straight_Outta_CastiUITests.swift */; };
 		4717EF731E56609300C1144F /* Geofence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4717EF721E56609300C1144F /* Geofence.swift */; };
 		47FBB4C41E57AAFA0070C504 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FBB4C31E57AAFA0070C504 /* Constants.swift */; };
+		78C036221E687DA300FD3BE9 /* GoogleFormsConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C036211E687DA300FD3BE9 /* GoogleFormsConnection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		4717EF661E56607600C1144F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4717EF721E56609300C1144F /* Geofence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Geofence.swift; sourceTree = "<group>"; };
 		47FBB4C31E57AAFA0070C504 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		78C036211E687DA300FD3BE9 /* GoogleFormsConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleFormsConnection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				4717EF4B1E56607600C1144F /* Assets.xcassets */,
 				4717EF4D1E56607600C1144F /* LaunchScreen.storyboard */,
 				4717EF501E56607600C1144F /* Info.plist */,
+				78C036211E687DA300FD3BE9 /* GoogleFormsConnection.swift */,
 			);
 			path = "Straight Outta Casti";
 			sourceTree = "<group>";
@@ -269,6 +272,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4717EF731E56609300C1144F /* Geofence.swift in Sources */,
+				78C036221E687DA300FD3BE9 /* GoogleFormsConnection.swift in Sources */,
 				4717EF471E56607600C1144F /* ViewController.swift in Sources */,
 				4717EF451E56607600C1144F /* AppDelegate.swift in Sources */,
 				47FBB4C41E57AAFA0070C504 /* Constants.swift in Sources */,
