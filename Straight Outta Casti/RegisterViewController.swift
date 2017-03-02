@@ -12,7 +12,6 @@ class RegisterViewController: UIViewController {
 
     @IBOutlet weak var firstNameEntry: UITextField!
     @IBOutlet weak var lastNameEntry: UITextField!
-    let accountStorage: AccountStorage
     
     override func viewDidLoad() {
         super.viewDidLoad()
