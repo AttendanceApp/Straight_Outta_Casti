@@ -15,6 +15,8 @@
 		4717EF5A1E56607600C1144F /* Straight_Outta_CastiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4717EF591E56607600C1144F /* Straight_Outta_CastiTests.swift */; };
 		4717EF651E56607600C1144F /* Straight_Outta_CastiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4717EF641E56607600C1144F /* Straight_Outta_CastiUITests.swift */; };
 		4717EF731E56609300C1144F /* Geofence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4717EF721E56609300C1144F /* Geofence.swift */; };
+		47F0F2FE1E6880E50035B907 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F0F2FD1E6880E50035B907 /* Account.swift */; };
+		47F0F3001E6882AB0035B907 /* AccountStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F0F2FF1E6882AB0035B907 /* AccountStorage.swift */; };
 		47FBB4C41E57AAFA0070C504 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FBB4C31E57AAFA0070C504 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +52,8 @@
 		4717EF641E56607600C1144F /* Straight_Outta_CastiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Straight_Outta_CastiUITests.swift; sourceTree = "<group>"; };
 		4717EF661E56607600C1144F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4717EF721E56609300C1144F /* Geofence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Geofence.swift; sourceTree = "<group>"; };
+		47F0F2FD1E6880E50035B907 /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		47F0F2FF1E6882AB0035B907 /* AccountStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountStorage.swift; sourceTree = "<group>"; };
 		47FBB4C31E57AAFA0070C504 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -105,6 +109,8 @@
 				4717EF721E56609300C1144F /* Geofence.swift */,
 				47FBB4C31E57AAFA0070C504 /* Constants.swift */,
 				4717EF461E56607600C1144F /* ViewController.swift */,
+				47F0F2FD1E6880E50035B907 /* Account.swift */,
+				47F0F2FF1E6882AB0035B907 /* AccountStorage.swift */,
 				4717EF481E56607600C1144F /* Main.storyboard */,
 				4717EF4B1E56607600C1144F /* Assets.xcassets */,
 				4717EF4D1E56607600C1144F /* LaunchScreen.storyboard */,
@@ -269,7 +275,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				4717EF731E56609300C1144F /* Geofence.swift in Sources */,
+				47F0F2FE1E6880E50035B907 /* Account.swift in Sources */,
 				4717EF471E56607600C1144F /* ViewController.swift in Sources */,
+				47F0F3001E6882AB0035B907 /* AccountStorage.swift in Sources */,
 				4717EF451E56607600C1144F /* AppDelegate.swift in Sources */,
 				47FBB4C41E57AAFA0070C504 /* Constants.swift in Sources */,
 			);
