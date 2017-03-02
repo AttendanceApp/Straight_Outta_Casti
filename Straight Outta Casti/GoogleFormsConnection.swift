@@ -10,6 +10,11 @@ import Foundation
 import UIKit
 
 class GoogleFormsConnection {
+    var firstName = "First"
+    var lastName = "Last"
+    var reason = "reason"
+    var out = "out"
+    
     
     static func doMyBidNiss() {
         let myUrl = NSURL(string: "https://docs.google.com/a/castilleja.org/forms/d/e/1FAIpQLSdY6ks151DSYNytLyQ3aafNqvhmtF99MJPU95lAWVVRwt846g/formResponse")
@@ -20,7 +25,7 @@ class GoogleFormsConnection {
         
         request.httpMethod = "POST"
         
-        let fieldsToPost = "entry.1266582852=Deborah&entry.2132189692=Campbell&entry.1341441446=i rock thats why" as NSString
+        let fieldsToPost = "entry.1266582852=" + firstName + "&entry.2132189692=" + lastName + "&entry.1341441446=" + reason as NSString
         
         request.setValue("application/x-www-form-urlencoded; charset=utf-8", forHTTPHeaderField: "Content-Type")
         
