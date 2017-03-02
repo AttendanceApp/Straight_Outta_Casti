@@ -17,6 +17,7 @@
 		4717EF731E56609300C1144F /* Geofence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4717EF721E56609300C1144F /* Geofence.swift */; };
 		47F0F2FE1E6880E50035B907 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F0F2FD1E6880E50035B907 /* Account.swift */; };
 		47F0F3001E6882AB0035B907 /* AccountStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F0F2FF1E6882AB0035B907 /* AccountStorage.swift */; };
+		47F0F3021E6884290035B907 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F0F3011E6884290035B907 /* RegisterViewController.swift */; };
 		47FBB4C41E57AAFA0070C504 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FBB4C31E57AAFA0070C504 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +55,7 @@
 		4717EF721E56609300C1144F /* Geofence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Geofence.swift; sourceTree = "<group>"; };
 		47F0F2FD1E6880E50035B907 /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		47F0F2FF1E6882AB0035B907 /* AccountStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountStorage.swift; sourceTree = "<group>"; };
+		47F0F3011E6884290035B907 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		47FBB4C31E57AAFA0070C504 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -109,6 +111,7 @@
 				4717EF721E56609300C1144F /* Geofence.swift */,
 				47FBB4C31E57AAFA0070C504 /* Constants.swift */,
 				4717EF461E56607600C1144F /* ViewController.swift */,
+				47F0F3011E6884290035B907 /* RegisterViewController.swift */,
 				47F0F2FD1E6880E50035B907 /* Account.swift */,
 				47F0F2FF1E6882AB0035B907 /* AccountStorage.swift */,
 				4717EF481E56607600C1144F /* Main.storyboard */,
@@ -276,6 +279,7 @@
 			files = (
 				4717EF731E56609300C1144F /* Geofence.swift in Sources */,
 				47F0F2FE1E6880E50035B907 /* Account.swift in Sources */,
+				47F0F3021E6884290035B907 /* RegisterViewController.swift in Sources */,
 				4717EF471E56607600C1144F /* ViewController.swift in Sources */,
 				47F0F3001E6882AB0035B907 /* AccountStorage.swift in Sources */,
 				4717EF451E56607600C1144F /* AppDelegate.swift in Sources */,

@@ -8,7 +8,7 @@
 
 import Foundation
 
-class StorageController {
+class AccountStorage {
     fileprivate let documentsDirectoryURL = FileManager.default
         .urls(for: .documentDirectory, in: .userDomainMask)
         .first!
