@@ -35,7 +35,7 @@ class Geofence: NSObject, CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let lastLatitude = locations[locations.count-1].coordinate.latitude
         let lastLongitude = locations[locations.count-1].coordinate.longitude
-        inCasti = ((abs(lastLatitude - targetLatitude)) <= longitudeDeadband || (abs(lastLongitude - targetLongitude) <= longitudeDeadband))
+        inCasti = ((abs(lastLatitude - targetLatitude) <= longitudeDeadband) && (abs(lastLongitude - targetLongitude) <= longitudeDeadband))
         print("Latitude:", lastLatitude, "Longitude:", lastLongitude)
         print("Latitude Difference:", abs(lastLatitude - targetLatitude))
         print("Longitude Difference:", abs(lastLongitude - targetLongitude))
