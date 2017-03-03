@@ -16,7 +16,7 @@ class GoogleFormsConnection {
     var out = "out"
     
     
-    static func doMyBidNiss() {
+    static func doMyBidNiss(firstName: String, lastName: String, reason: String) {
         let myUrl = NSURL(string: "https://docs.google.com/a/castilleja.org/forms/d/e/1FAIpQLSdY6ks151DSYNytLyQ3aafNqvhmtF99MJPU95lAWVVRwt846g/formResponse")
         
         var request = URLRequest(url:myUrl! as URL)
@@ -24,7 +24,6 @@ class GoogleFormsConnection {
         let session = URLSession(configuration: URLSessionConfiguration.default)
         
         request.httpMethod = "POST"
-        
         let fieldsToPost = "entry.1266582852=" + firstName + "&entry.2132189692=" + lastName + "&entry.1341441446=" + reason as NSString
         
         request.setValue("application/x-www-form-urlencoded; charset=utf-8", forHTTPHeaderField: "Content-Type")
