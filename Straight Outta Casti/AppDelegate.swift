@@ -12,10 +12,25 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    let stateController = StateController(accountStorage: AccountStorage())
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        if !stateController.hasUserInfo() {
+            let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+            let registerController = storyboard.instantiateViewController(withIdentifier: "RegisterViewController") as! RegisterViewController
+            registerController.stateController = self.stateController
+            self.window?.makeKeyAndVisible()
+            self.window?.rootViewController = registerController
+        } else {
+            let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+            let signOutController = storyboard.instantiateViewController(withIdentifier: "SignOutViewController") as! SignOutViewController
+            signOutController.stateController = self.stateController
+            self.window?.makeKeyAndVisible()
+            self.window?.rootViewController = signOutController
+        }
+
         return true
     }
 

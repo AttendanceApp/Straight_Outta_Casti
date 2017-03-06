@@ -12,6 +12,7 @@ class RegisterViewController: UIViewController {
 
     @IBOutlet weak var firstNameEntry: UITextField!
     @IBOutlet weak var lastNameEntry: UITextField!
+    var stateController: StateController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +26,9 @@ class RegisterViewController: UIViewController {
     }
     
     @IBAction func submitPressed(_ sender: UIButton) {
+        let account = Account(firstName: firstNameEntry.text!, lastName: lastNameEntry.text!)
+        stateController.set(account)
+        self.performSegue(withIdentifier: "submitRegistration", sender: nil)
     }
 
     /*
