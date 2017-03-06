@@ -118,12 +118,12 @@
 				47F0F3011E6884290035B907 /* RegisterViewController.swift */,
 				47F0F2FD1E6880E50035B907 /* Account.swift */,
 				47F0F2FF1E6882AB0035B907 /* AccountStorage.swift */,
+				78C036211E687DA300FD3BE9 /* GoogleFormsConnection.swift */,
 				47870F6D1E6E10B000AA5375 /* StateController.swift */,
 				4717EF481E56607600C1144F /* Main.storyboard */,
 				4717EF4B1E56607600C1144F /* Assets.xcassets */,
 				4717EF4D1E56607600C1144F /* LaunchScreen.storyboard */,
 				4717EF501E56607600C1144F /* Info.plist */,
-				78C036211E687DA300FD3BE9 /* GoogleFormsConnection.swift */,
 			);
 			path = "Straight Outta Casti";
 			sourceTree = "<group>";
@@ -290,7 +290,7 @@
 				47F0F3001E6882AB0035B907 /* AccountStorage.swift in Sources */,
 				47870F6E1E6E10B000AA5375 /* StateController.swift in Sources */,
 				78C036221E687DA300FD3BE9 /* GoogleFormsConnection.swift in Sources */,
-				4717EF471E56607600C1144F /* ViewController.swift in Sources */,
+				4717EF471E56607600C1144F /* SignOutViewController.swift in Sources */,
 				4717EF451E56607600C1144F /* AppDelegate.swift in Sources */,
 				47FBB4C41E57AAFA0070C504 /* Constants.swift in Sources */,
 			);
