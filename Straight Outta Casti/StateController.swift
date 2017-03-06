@@ -23,6 +23,14 @@ class StateController {
         accountStorage.save(self.accounts)
     }
     
+    func get() -> Account {
+        if accountStorage.fetchAccounts().count > 0 {
+            return accountStorage.fetchAccounts()[0]
+        } else {
+            return Account(firstName: "No", lastName: "Account")
+        }
+    }
+    
     func hasUserInfo() -> Bool {
         let userInfoArray = self.accountStorage.fetchAccounts()
         if userInfoArray.count > 0 {
