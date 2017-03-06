@@ -140,7 +140,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Thumba" translatesAutoresizingMaskIntoConstraints="NO" id="hGe-2b-xis">
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Thumba Image" translatesAutoresizingMaskIntoConstraints="NO" id="hGe-2b-xis">
                                 <rect key="frame" x="145" y="441" width="84" height="84"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="84" id="rAY-9E-f3K"/>
@@ -247,6 +247,6 @@
     </scenes>
     <resources>
         <image name="Checkmark" width="490" height="490"/>
-        <image name="Thumba" width="500" height="500"/>
+        <image name="Thumba Image" width="500" height="500"/>
     </resources>
 </document>

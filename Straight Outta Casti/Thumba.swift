@@ -10,7 +10,7 @@
 import UIKit
 import LocalAuthentication
 
-class Thumba: UIViewController {
+class Thumba {
     @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var message: UILabel!
     @IBOutlet weak var refresh: UIButton!
@@ -24,19 +24,7 @@ class Thumba: UIViewController {
         Utils.removeObserverForNotifications(observer: self)
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        setupController()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        updateUI()
-    }
-    
-    private func setupController() {
+    func setupController() {
         Utils.registerNotificationWillEnterForeground(observer: self, selector: #selector(Thumba.updateUI))
         
         // The Refresh button will let us to repeat the login process so many times as we want
@@ -72,7 +60,7 @@ class Thumba: UIViewController {
         loginProcess(policy: policy!)
     }
     
-    private func loginProcess(policy: LAPolicy) {
+    func loginProcess(policy: LAPolicy) {
         // Start evaluation process with a callback that is executed when the user ends the process successfully or not
         context.evaluatePolicy(policy, localizedReason: kMsgShowReason, reply: { (success, error) in
             DispatchQueue.main.async {
@@ -126,12 +114,6 @@ class Thumba: UIViewController {
         image.image = UIImage(named: "TouchID_off")
         message.text = "Unexpected error! 😱"
     }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
     
     // MARK: IBAction Functions
     
