@@ -11,10 +11,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Register View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Straight_Outta_Casti" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RegisterViewController" id="BYZ-38-t0r" customClass="RegisterViewController" customModule="Straight_Outta_Casti" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -70,6 +70,9 @@
                                 <rect key="frame" x="142" y="553" width="91" height="47"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <state key="normal" title="Submit"/>
+                                <connections>
+                                    <action selector="submitPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OHG-bI-jii"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -94,15 +97,20 @@
                             <constraint firstItem="EsQ-32-chV" firstAttribute="leading" secondItem="7hw-9A-JLF" secondAttribute="trailing" constant="27" id="mqN-5V-5Wd"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="firstNameEntry" destination="uEH-SD-Sqf" id="2MU-DA-03f"/>
+                        <outlet property="lastNameEntry" destination="EsQ-32-chV" id="kVn-V2-SbL"/>
+                        <segue destination="jKp-st-cq4" kind="presentation" identifier="submitRegistration" id="Nbk-rd-sim"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="88.799999999999997" y="23.838080959520241"/>
         </scene>
-        <!--View Controller-->
+        <!--Sign Out View Controller-->
         <scene sceneID="ZDe-jk-Q2t">
             <objects>
-                <viewController id="jKp-st-cq4" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignOutViewController" id="jKp-st-cq4" customClass="SignOutViewController" customModule="Straight_Outta_Casti" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="YIe-Ov-XEL"/>
                         <viewControllerLayoutGuide type="bottom" id="Nik-e8-uhl"/>
