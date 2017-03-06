@@ -8,9 +8,10 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class SignOutViewController: UIViewController {
 
-    let geofence: Geofence = Geofence(latitudeDeadband: Constants.Geolocation.latitudeDeadband, longitudeDeadband: Constants.Geolocation.longitudeDeadband, targetLatitude: Constants.Geolocation.castiLatitude, targetLongitude: Constants.Geolocation.castiLongitude)
+//    let geofence: Geofence = Geofence(latitudeDeadband: Constants.Geolocation.latitudeDeadband, longitudeDeadband: Constants.Geolocation.longitudeDeadband, targetLatitude: Constants.Geolocation.castiLatitude, targetLongitude: Constants.Geolocation.castiLongitude)
+    var stateController: StateController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
