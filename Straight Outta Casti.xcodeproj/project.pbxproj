@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		126939BA1E6E10EF00928929 /* Thumba.swift in Sources */ = {isa = PBXBuildFile; fileRef = 126939B91E6E10EF00928929 /* Thumba.swift */; };
+		126939BC1E6E127200928929 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 126939BB1E6E127200928929 /* Utils.swift */; };
 		4717EF451E56607600C1144F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4717EF441E56607600C1144F /* AppDelegate.swift */; };
 		4717EF471E56607600C1144F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4717EF461E56607600C1144F /* ViewController.swift */; };
 		4717EF4A1E56607600C1144F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4717EF481E56607600C1144F /* Main.storyboard */; };
@@ -37,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		126939B91E6E10EF00928929 /* Thumba.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Thumba.swift; sourceTree = "<group>"; };
+		126939BB1E6E127200928929 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		4717EF411E56607600C1144F /* Straight Outta Casti.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Straight Outta Casti.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4717EF441E56607600C1144F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4717EF461E56607600C1144F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -104,6 +108,8 @@
 			isa = PBXGroup;
 			children = (
 				4717EF441E56607600C1144F /* AppDelegate.swift */,
+				126939B91E6E10EF00928929 /* Thumba.swift */,
+				126939BB1E6E127200928929 /* Utils.swift */,
 				4717EF721E56609300C1144F /* Geofence.swift */,
 				47FBB4C31E57AAFA0070C504 /* Constants.swift */,
 				4717EF461E56607600C1144F /* ViewController.swift */,
@@ -273,6 +279,8 @@
 			files = (
 				4717EF731E56609300C1144F /* Geofence.swift in Sources */,
 				78C036221E687DA300FD3BE9 /* GoogleFormsConnection.swift in Sources */,
+				126939BA1E6E10EF00928929 /* Thumba.swift in Sources */,
+				126939BC1E6E127200928929 /* Utils.swift in Sources */,
 				4717EF471E56607600C1144F /* ViewController.swift in Sources */,
 				4717EF451E56607600C1144F /* AppDelegate.swift in Sources */,
 				47FBB4C41E57AAFA0070C504 /* Constants.swift in Sources */,

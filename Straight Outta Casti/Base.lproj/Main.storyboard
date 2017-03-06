@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -132,7 +132,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Thumba" translatesAutoresizingMaskIntoConstraints="NO" id="hGe-2b-xis">
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Thumba" translatesAutoresizingMaskIntoConstraints="NO" id="hGe-2b-xis">
                                 <rect key="frame" x="145" y="441" width="84" height="84"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="84" id="rAY-9E-f3K"/>
@@ -145,12 +145,22 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h8k-UG-arY">
+                                <rect key="frame" x="136" y="403" width="103" height="47"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="103" id="9A5-hv-SPX"/>
+                                    <constraint firstAttribute="height" constant="47" id="cWT-VT-QXI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Done"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="ith-kK-9zc" firstAttribute="width" secondItem="KqQ-dX-6TU" secondAttribute="width" id="1jQ-tX-SZR"/>
                             <constraint firstItem="eYT-KD-GBT" firstAttribute="top" secondItem="hGe-2b-xis" secondAttribute="bottom" constant="8" id="6hn-gu-4RT"/>
                             <constraint firstItem="YWJ-zE-O0d" firstAttribute="leading" secondItem="ith-kK-9zc" secondAttribute="leading" id="90k-Gf-Wa0"/>
+                            <constraint firstItem="h8k-UG-arY" firstAttribute="centerX" secondItem="WNP-gw-WGZ" secondAttribute="centerX" id="CH7-3z-RU3"/>
                             <constraint firstItem="hGe-2b-xis" firstAttribute="top" secondItem="ith-kK-9zc" secondAttribute="bottom" constant="46" id="Ht8-O8-K0Q"/>
                             <constraint firstItem="hGe-2b-xis" firstAttribute="centerX" secondItem="WNP-gw-WGZ" secondAttribute="centerX" id="Nge-D3-onB"/>
                             <constraint firstItem="KqQ-dX-6TU" firstAttribute="centerX" secondItem="WNP-gw-WGZ" secondAttribute="centerX" id="Vpp-im-Rce"/>
@@ -159,6 +169,7 @@
                             <constraint firstItem="eYT-KD-GBT" firstAttribute="centerX" secondItem="hGe-2b-xis" secondAttribute="centerX" id="bwT-57-5Be"/>
                             <constraint firstItem="ith-kK-9zc" firstAttribute="top" secondItem="YWJ-zE-O0d" secondAttribute="bottom" constant="8" id="m6c-0m-tkO"/>
                             <constraint firstItem="ith-kK-9zc" firstAttribute="top" secondItem="KqQ-dX-6TU" secondAttribute="bottom" constant="98" id="nJv-XX-B30"/>
+                            <constraint firstItem="h8k-UG-arY" firstAttribute="top" secondItem="ith-kK-9zc" secondAttribute="bottom" constant="8" id="tZV-E6-JqR"/>
                         </constraints>
                     </view>
                 </viewController>
