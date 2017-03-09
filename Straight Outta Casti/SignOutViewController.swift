@@ -11,6 +11,7 @@ import UIKit
 class SignOutViewController: UIViewController {
     
     var stateController: StateController!
+    @IBOutlet weak var reason: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +24,12 @@ class SignOutViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func done(_ sender: UIButton) {
+        let account = stateController.get()
+        if reason.text != nil {
+            GoogleFormsConnection.doMyBidNiss(firstName: account.firstName, lastName: account.lastName, reason: reason.text!)
+        }
+    }
 
     /*
     // MARK: - Navigation
