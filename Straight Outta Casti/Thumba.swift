@@ -16,7 +16,7 @@ class Thumba {
     @IBOutlet weak var refresh: UIButton!
     
     
-    let kMsgShowReason = "Sign Out Drew Leary"
+    let kMsgShowReason = "Sign Out for Drew Leary"
     
     var context = LAContext()
     
@@ -31,15 +31,17 @@ class Thumba {
         refresh.alpha = 0
     }
     
-    func updateUI() {
+    @objc func updateUI() {
         var policy: LAPolicy?
         // Depending the iOS version we'll need to choose the policy we are able to use
         if #available(iOS 9.0, *) {
             // iOS 9+ users with Biometric and Passcode verification
-            policy = .deviceOwnerAuthentication
+            // Is changing this to ...WithBiometrics necessary? Is it sufficient to set fallback title to empty? Are there any negative ramifications to using WithBiometrics?
+            policy = .deviceOwnerAuthenticationWithBiometrics
+            context.localizedFallbackTitle = ""
         } else {
             // iOS 8+ users with Biometric and Custom (Fallback button) verification
-            context.localizedFallbackTitle = "Fuu!"
+            context.localizedFallbackTitle = ""
             policy = .deviceOwnerAuthenticationWithBiometrics
         }
         
@@ -52,10 +54,6 @@ class Thumba {
             message.text = err?.localizedDescription
             return
         }
-        
-        // Great! The user is able to use his/her Touch ID 👍
-        image.image = UIImage(named: "TouchID_on")
-        
         
         loginProcess(policy: policy!)
     }
@@ -80,12 +78,8 @@ class Thumba {
                         self.message.text = "Authentication was canceled by user."
                         // Fallback button was pressed and an extra login step should be implemented for iOS 8 users.
                     // By the other hand, iOS 9+ users will use the pasccode verification implemented by the own system.
-                    case LAError.userFallback:
-                        self.message.text = "The user tapped the fallback button (Fuu!)"
                     case LAError.systemCancel:
                         self.message.text = "Authentication was canceled by system."
-                    case LAError.passcodeNotSet:
-                        self.message.text = "Passcode is not set on the device."
                     case LAError.touchIDNotAvailable:
                         self.message.text = "Touch ID is not available on the device."
                     case LAError.touchIDNotEnrolled:
@@ -104,15 +98,12 @@ class Thumba {
                     }
                     return
                 }
-                // Add segue here
-                // Good news! Everything went fine 
             }
         })
     }
     
     private func showUnexpectedErrorMessage() {
         image.image = UIImage(named: "TouchID_off")
-        message.text = "Unexpected error! 😱"
     }
     
     // MARK: IBAction Functions
@@ -129,4 +120,6 @@ class Thumba {
         updateUI()
     }
 }
+
+
 
