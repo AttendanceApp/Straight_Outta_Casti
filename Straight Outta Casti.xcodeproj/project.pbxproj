@@ -19,6 +19,7 @@
 		47F0F3001E6882AB0035B907 /* AccountStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F0F2FF1E6882AB0035B907 /* AccountStorage.swift */; };
 		47F0F3021E6884290035B907 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F0F3011E6884290035B907 /* RegisterViewController.swift */; };
 		47F2010C1E6E190D00AE9CBD /* SignOutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F2010B1E6E190D00AE9CBD /* SignOutViewController.swift */; };
+		47F2010E1E6E1BE400AE9CBD /* GeoDisabledViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F2010D1E6E1BE400AE9CBD /* GeoDisabledViewController.swift */; };
 		47FBB4C41E57AAFA0070C504 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FBB4C31E57AAFA0070C504 /* Constants.swift */; };
 		78C036221E687DA300FD3BE9 /* GoogleFormsConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C036211E687DA300FD3BE9 /* GoogleFormsConnection.swift */; };
 /* End PBXBuildFile section */
@@ -59,6 +60,7 @@
 		47F0F2FF1E6882AB0035B907 /* AccountStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountStorage.swift; sourceTree = "<group>"; };
 		47F0F3011E6884290035B907 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		47F2010B1E6E190D00AE9CBD /* SignOutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignOutViewController.swift; sourceTree = "<group>"; };
+		47F2010D1E6E1BE400AE9CBD /* GeoDisabledViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeoDisabledViewController.swift; sourceTree = "<group>"; };
 		47FBB4C31E57AAFA0070C504 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		78C036211E687DA300FD3BE9 /* GoogleFormsConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleFormsConnection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -112,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				4717EF441E56607600C1144F /* AppDelegate.swift */,
+				47F2010D1E6E1BE400AE9CBD /* GeoDisabledViewController.swift */,
 				47F2010B1E6E190D00AE9CBD /* SignOutViewController.swift */,
 				4717EF721E56609300C1144F /* Geofence.swift */,
 				47FBB4C31E57AAFA0070C504 /* Constants.swift */,
@@ -287,6 +290,7 @@
 				47F0F2FE1E6880E50035B907 /* Account.swift in Sources */,
 				47F0F3021E6884290035B907 /* RegisterViewController.swift in Sources */,
 				47F0F3001E6882AB0035B907 /* AccountStorage.swift in Sources */,
+				47F2010E1E6E1BE400AE9CBD /* GeoDisabledViewController.swift in Sources */,
 				47F2010C1E6E190D00AE9CBD /* SignOutViewController.swift in Sources */,
 				47870F6E1E6E10B000AA5375 /* StateController.swift in Sources */,
 				78C036221E687DA300FD3BE9 /* GoogleFormsConnection.swift in Sources */,
