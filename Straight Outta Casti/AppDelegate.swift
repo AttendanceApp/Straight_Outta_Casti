@@ -18,19 +18,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // If not on Casti, app doesn't work, if on Casti, register or direct to sign out screen
-        if !geofence.inCasti {
-            let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-            let geoDisabledController = storyboard.instantiateViewController(withIdentifier: "GeoDisabledViewController") as! GeoDisabledViewController
-            self.window?.makeKeyAndVisible()
-            self.window?.rootViewController = geoDisabledController
-        } else if !stateController.hasUserInfo() {
-            let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+//        if !geofence.inCasti {
+//            let geoDisabledController = storyboard.instantiateViewController(withIdentifier: "GeoDisabledViewController") as! GeoDisabledViewController
+//            self.window?.makeKeyAndVisible()
+//            self.window?.rootViewController = geoDisabledController
+//        } else 
+        if !stateController.hasUserInfo() {
             let registerController = storyboard.instantiateViewController(withIdentifier: "RegisterViewController") as! RegisterViewController
             registerController.stateController = self.stateController
             self.window?.makeKeyAndVisible()
             self.window?.rootViewController = registerController
         } else {
-            let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
             let signOutController = storyboard.instantiateViewController(withIdentifier: "SignOutViewController") as! SignOutViewController
             signOutController.stateController = self.stateController
             self.window?.makeKeyAndVisible()
