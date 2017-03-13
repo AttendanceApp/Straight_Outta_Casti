@@ -30,7 +30,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             self.window?.makeKeyAndVisible()
             self.window?.rootViewController = registerController
         } else {
-            let signOutController = storyboard.instantiateViewController(withIdentifier: "SignOutViewController") as! SignOutViewController
+            let signOutController = storyboard.instantiateViewController(withIdentifier: "OutViewController") as! OutViewController
             signOutController.stateController = self.stateController
             self.window?.makeKeyAndVisible()
             self.window?.rootViewController = signOutController

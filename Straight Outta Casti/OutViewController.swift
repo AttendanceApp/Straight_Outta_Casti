@@ -1,5 +1,5 @@
 //
-//  SignOutViewController.swift
+//  OutViewController.swift
 //  Straight Outta Casti
 //
 //  Created by Vanessa Woo on 3/6/17.
