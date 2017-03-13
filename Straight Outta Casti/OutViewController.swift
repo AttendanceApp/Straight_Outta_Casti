@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SignOutViewController: UIViewController {
+class OutViewController: UIViewController {
     
     var stateController: StateController!
     @IBOutlet weak var reason: UITextField!
