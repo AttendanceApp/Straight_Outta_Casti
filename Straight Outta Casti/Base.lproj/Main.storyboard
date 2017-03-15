@@ -128,7 +128,7 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ith-kK-9zc">
                                 <rect key="frame" x="92" y="265" width="189" height="130"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="130" id="RDt-oY-9dz"/>
+                                    <constraint firstAttribute="width" secondItem="ith-kK-9zc" secondAttribute="height" multiplier="189:130" id="lHB-BP-8yb"/>
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -152,15 +152,15 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="ith-kK-9zc" firstAttribute="width" secondItem="KqQ-dX-6TU" secondAttribute="width" id="1jQ-tX-SZR"/>
+                            <constraint firstItem="YWJ-zE-O0d" firstAttribute="top" secondItem="KqQ-dX-6TU" secondAttribute="bottom" constant="69" id="6iR-JY-BKU"/>
                             <constraint firstItem="YWJ-zE-O0d" firstAttribute="leading" secondItem="ith-kK-9zc" secondAttribute="leading" id="90k-Gf-Wa0"/>
                             <constraint firstItem="4B4-Bv-pSH" firstAttribute="top" secondItem="ith-kK-9zc" secondAttribute="bottom" constant="127" id="VOJ-nj-2A2"/>
                             <constraint firstItem="KqQ-dX-6TU" firstAttribute="centerX" secondItem="WNP-gw-WGZ" secondAttribute="centerX" id="Vpp-im-Rce"/>
-                            <constraint firstItem="KqQ-dX-6TU" firstAttribute="top" secondItem="YIe-Ov-XEL" secondAttribute="bottom" constant="93" id="WaM-xn-1KA"/>
                             <constraint firstItem="ith-kK-9zc" firstAttribute="centerX" secondItem="WNP-gw-WGZ" secondAttribute="centerX" constant="-1" id="ZfO-Pc-OEg"/>
                             <constraint firstItem="4B4-Bv-pSH" firstAttribute="centerX" secondItem="WNP-gw-WGZ" secondAttribute="centerX" id="cUT-Ot-1d6"/>
+                            <constraint firstItem="KqQ-dX-6TU" firstAttribute="top" secondItem="YIe-Ov-XEL" secondAttribute="bottom" constant="93" id="hth-Ee-MF8"/>
+                            <constraint firstItem="KqQ-dX-6TU" firstAttribute="top" secondItem="YIe-Ov-XEL" secondAttribute="bottom" constant="93" id="i2k-Re-FE7"/>
                             <constraint firstItem="ith-kK-9zc" firstAttribute="top" secondItem="YWJ-zE-O0d" secondAttribute="bottom" constant="8" id="m6c-0m-tkO"/>
-                            <constraint firstItem="ith-kK-9zc" firstAttribute="top" secondItem="KqQ-dX-6TU" secondAttribute="bottom" constant="98" id="nJv-XX-B30"/>
-                            <constraint firstAttribute="top" secondItem="ith-kK-9zc" secondAttribute="bottom" constant="8" id="tZV-E6-JqR"/>
                         </constraints>
                     </view>
                     <connections>
