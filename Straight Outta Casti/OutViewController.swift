@@ -1,5 +1,5 @@
 //
-//  SignOutViewController.swift
+//  OutViewController.swift
 //  Straight Outta Casti
 //
 //  Created by Vanessa Woo on 3/6/17.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SignOutViewController: UIViewController {
+class OutViewController: UIViewController {
     
     var stateController: StateController!
     @IBOutlet weak var reason: UITextField!

@@ -107,10 +107,10 @@
             </objects>
             <point key="canvasLocation" x="88.799999999999997" y="23.838080959520241"/>
         </scene>
-        <!--Sign Out View Controller-->
+        <!--Out View Controller-->
         <scene sceneID="ZDe-jk-Q2t">
             <objects>
-                <viewController storyboardIdentifier="SignOutViewController" id="jKp-st-cq4" customClass="SignOutViewController" customModule="Straight_Outta_Casti" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="OutViewController" id="jKp-st-cq4" customClass="OutViewController" customModule="Straight_Outta_Casti" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="YIe-Ov-XEL"/>
                         <viewControllerLayoutGuide type="bottom" id="Nik-e8-uhl"/>
@@ -141,7 +141,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4B4-Bv-pSH">
-                                <rect key="frame" x="152.5" y="522" width="69" height="47"/>
+                                <rect key="frame" x="153" y="522" width="69" height="47"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <state key="normal" title="Done"/>
                                 <connections>
