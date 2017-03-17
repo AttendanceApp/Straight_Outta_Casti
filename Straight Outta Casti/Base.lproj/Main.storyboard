@@ -138,14 +138,14 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Thumba" translatesAutoresizingMaskIntoConstraints="NO" id="hGe-2b-xis">
-                                <rect key="frame" x="145" y="441" width="84" height="84"/>
+                                <rect key="frame" x="145.5" y="441" width="84" height="84"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="84" id="rAY-9E-f3K"/>
                                     <constraint firstAttribute="width" secondItem="hGe-2b-xis" secondAttribute="height" multiplier="1:1" id="y8v-Fu-HuI"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Touch ID to submit." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eYT-KD-GBT">
-                                <rect key="frame" x="112" y="533" width="149" height="21"/>
+                                <rect key="frame" x="112.5" y="533" width="149" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
