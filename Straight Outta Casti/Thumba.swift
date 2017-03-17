@@ -12,7 +12,7 @@ import LocalAuthentication
 
 class Thumba {
     
-    let kMsgShowReason = "Sign Out for Drew Leary"
+    let kMsgShowReason = "Sign Out"
     
     var context = LAContext()
     
@@ -48,9 +48,9 @@ class Thumba {
         loginProcess(policy: policy!)
     }
     
-    func loginProcess(policy: LAPolicy) {
+    private func loginProcess(policy: LAPolicy) {
         // Start evaluation process with a callback that is executed when the user ends the process successfully or not
-        context.evaluatePolicy(<#T##policy: LAPolicy##LAPolicy#>, localizedReason: kMsgShowReason) { (success, error) in
+        context.evaluatePolicy(policy, localizedReason: kMsgShowReason) { (success, error) in
             DispatchQueue.main.async {
                 UIView.animate(withDuration: 0.5, animations: {
                 })
