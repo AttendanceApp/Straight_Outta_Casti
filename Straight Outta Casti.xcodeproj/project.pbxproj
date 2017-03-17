@@ -220,7 +220,7 @@
 				TargetAttributes = {
 					4717EF401E56607600C1144F = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = UDD5K7FX5V;
+						DevelopmentTeam = 8984R3D46R;
 						ProvisioningStyle = Automatic;
 					};
 					4717EF541E56607600C1144F = {
@@ -451,7 +451,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = UDD5K7FX5V;
+				DEVELOPMENT_TEAM = 8984R3D46R;
 				INFOPLIST_FILE = "Straight Outta Casti/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "attendance.Straight-Outta-Casti";
@@ -464,7 +464,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = UDD5K7FX5V;
+				DEVELOPMENT_TEAM = 8984R3D46R;
 				INFOPLIST_FILE = "Straight Outta Casti/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "attendance.Straight-Outta-Casti";

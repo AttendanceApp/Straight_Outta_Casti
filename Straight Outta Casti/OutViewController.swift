@@ -12,16 +12,16 @@ class OutViewController: UIViewController {
     
     var stateController: StateController!
     @IBOutlet weak var reason: UITextField!
+    let thumba = Thumba()
     
+        
     override func viewDidLoad() {
         super.viewDidLoad()
-//        Thumba.setupController()
         
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-//        Thumba.updateUI()
         
     }
     
@@ -33,6 +33,8 @@ class OutViewController: UIViewController {
     @IBAction func done(_ sender: UIButton) {
         let account = stateController.get()
         if reason.text != nil {
+            thumba.setupController()
+            thumba.updateUI()
             GoogleFormsConnection.doMyBidNiss(firstName: account.firstName, lastName: account.lastName, reason: reason.text!)
         }
     }
