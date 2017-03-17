@@ -12,10 +12,30 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    let stateController = StateController(accountStorage: AccountStorage())
+    let geofence: Geofence = Geofence(latitudeDeadband: Constants.Geolocation.latitudeDeadband, longitudeDeadband: Constants.Geolocation.longitudeDeadband, targetLatitude: Constants.Geolocation.castiLatitude, targetLongitude: Constants.Geolocation.castiLongitude)
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        // If not on Casti, app doesn't work, if on Casti, register or direct to sign out screen
+        let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+//        if !geofence.inCasti {
+//            let geoDisabledController = storyboard.instantiateViewController(withIdentifier: "GeoDisabledViewController") as! GeoDisabledViewController
+//            self.window?.makeKeyAndVisible()
+//            self.window?.rootViewController = geoDisabledController
+//        } else 
+        if !stateController.hasUserInfo() {
+            let registerController = storyboard.instantiateViewController(withIdentifier: "RegisterViewController") as! RegisterViewController
+            registerController.stateController = self.stateController
+            self.window?.makeKeyAndVisible()
+            self.window?.rootViewController = registerController
+        } else {
+            let signOutController = storyboard.instantiateViewController(withIdentifier: "OutViewController") as! OutViewController
+            signOutController.stateController = self.stateController
+            self.window?.makeKeyAndVisible()
+            self.window?.rootViewController = signOutController
+        }
+
         return true
     }
 

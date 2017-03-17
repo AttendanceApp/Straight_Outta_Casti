@@ -11,10 +11,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Register View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Straight_Outta_Casti" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RegisterViewController" id="BYZ-38-t0r" customClass="RegisterViewController" customModule="Straight_Outta_Casti" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -55,6 +55,9 @@
                                 <rect key="frame" x="142" y="376.5" width="91" height="47"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <state key="normal" title="Submit"/>
+                                <connections>
+                                    <action selector="submitPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OHG-bI-jii"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Register" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="moe-UG-gQ5">
                                 <rect key="frame" x="94" y="166" width="186" height="54"/>
@@ -99,15 +102,20 @@
                             <constraint firstItem="vne-9g-LWg" firstAttribute="top" secondItem="EsQ-32-chV" secondAttribute="bottom" constant="36" id="zFR-ze-dKX"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="firstNameEntry" destination="uEH-SD-Sqf" id="2MU-DA-03f"/>
+                        <outlet property="lastNameEntry" destination="EsQ-32-chV" id="kVn-V2-SbL"/>
+                        <segue destination="jKp-st-cq4" kind="presentation" identifier="submitRegistration" id="Nbk-rd-sim"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="88.799999999999997" y="23.838080959520241"/>
         </scene>
-        <!--View Controller-->
+        <!--Out View Controller-->
         <scene sceneID="ZDe-jk-Q2t">
             <objects>
-                <viewController id="jKp-st-cq4" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="OutViewController" id="jKp-st-cq4" customClass="OutViewController" customModule="Straight_Outta_Casti" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="YIe-Ov-XEL"/>
                         <viewControllerLayoutGuide type="bottom" id="Nik-e8-uhl"/>
@@ -125,7 +133,7 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ith-kK-9zc">
                                 <rect key="frame" x="92" y="265" width="189" height="130"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="130" id="RDt-oY-9dz"/>
+                                    <constraint firstAttribute="width" secondItem="ith-kK-9zc" secondAttribute="height" multiplier="189:130" id="lHB-BP-8yb"/>
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -154,22 +162,56 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="ith-kK-9zc" firstAttribute="width" secondItem="KqQ-dX-6TU" secondAttribute="width" id="1jQ-tX-SZR"/>
-                            <constraint firstItem="eYT-KD-GBT" firstAttribute="top" secondItem="hGe-2b-xis" secondAttribute="bottom" constant="8" id="6hn-gu-4RT"/>
+                            <constraint firstItem="YWJ-zE-O0d" firstAttribute="top" secondItem="KqQ-dX-6TU" secondAttribute="bottom" constant="69" id="6iR-JY-BKU"/>
                             <constraint firstItem="YWJ-zE-O0d" firstAttribute="leading" secondItem="ith-kK-9zc" secondAttribute="leading" id="90k-Gf-Wa0"/>
-                            <constraint firstItem="hGe-2b-xis" firstAttribute="top" secondItem="ith-kK-9zc" secondAttribute="bottom" constant="46" id="Ht8-O8-K0Q"/>
-                            <constraint firstItem="hGe-2b-xis" firstAttribute="centerX" secondItem="WNP-gw-WGZ" secondAttribute="centerX" id="Nge-D3-onB"/>
+                            <constraint firstItem="4B4-Bv-pSH" firstAttribute="top" secondItem="ith-kK-9zc" secondAttribute="bottom" constant="127" id="VOJ-nj-2A2"/>
                             <constraint firstItem="KqQ-dX-6TU" firstAttribute="centerX" secondItem="WNP-gw-WGZ" secondAttribute="centerX" id="Vpp-im-Rce"/>
-                            <constraint firstItem="KqQ-dX-6TU" firstAttribute="top" secondItem="YIe-Ov-XEL" secondAttribute="bottom" constant="93" id="WaM-xn-1KA"/>
                             <constraint firstItem="ith-kK-9zc" firstAttribute="centerX" secondItem="WNP-gw-WGZ" secondAttribute="centerX" constant="-1" id="ZfO-Pc-OEg"/>
-                            <constraint firstItem="eYT-KD-GBT" firstAttribute="centerX" secondItem="hGe-2b-xis" secondAttribute="centerX" id="bwT-57-5Be"/>
+                            <constraint firstItem="4B4-Bv-pSH" firstAttribute="centerX" secondItem="WNP-gw-WGZ" secondAttribute="centerX" id="cUT-Ot-1d6"/>
+                            <constraint firstItem="KqQ-dX-6TU" firstAttribute="top" secondItem="YIe-Ov-XEL" secondAttribute="bottom" constant="93" id="hth-Ee-MF8"/>
+                            <constraint firstItem="KqQ-dX-6TU" firstAttribute="top" secondItem="YIe-Ov-XEL" secondAttribute="bottom" constant="93" id="i2k-Re-FE7"/>
                             <constraint firstItem="ith-kK-9zc" firstAttribute="top" secondItem="YWJ-zE-O0d" secondAttribute="bottom" constant="8" id="m6c-0m-tkO"/>
-                            <constraint firstItem="ith-kK-9zc" firstAttribute="top" secondItem="KqQ-dX-6TU" secondAttribute="bottom" constant="98" id="nJv-XX-B30"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="reason" destination="ith-kK-9zc" id="YjM-ff-Wgu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xbz-El-ERY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="877.60000000000002" y="23.838080959520241"/>
+        </scene>
+        <!--Geo Disabled View Controller-->
+        <scene sceneID="f0z-dS-zw9">
+            <objects>
+                <viewController storyboardIdentifier="GeoDisabledViewController" id="kRt-xG-6u6" customClass="GeoDisabledViewController" customModule="Straight_Outta_Casti" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hVZ-Yn-Ipw"/>
+                        <viewControllerLayoutGuide type="bottom" id="HNr-Oh-8cc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ztK-uz-v1V">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You may not sign out because you are not on the Castilleja campus." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cEJ-Ti-C4i">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cEJ-Ti-C4i" firstAttribute="centerX" secondItem="ztK-uz-v1V" secondAttribute="centerX" id="040-DH-F3F"/>
+                            <constraint firstItem="cEJ-Ti-C4i" firstAttribute="width" secondItem="ztK-uz-v1V" secondAttribute="width" id="UKQ-f7-nMc"/>
+                            <constraint firstItem="cEJ-Ti-C4i" firstAttribute="height" secondItem="ztK-uz-v1V" secondAttribute="height" id="fLJ-dc-aiT"/>
+                            <constraint firstItem="cEJ-Ti-C4i" firstAttribute="centerY" secondItem="ztK-uz-v1V" secondAttribute="centerY" id="mmC-Lb-w6j"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BEd-JX-ljk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1377" y="-1198"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="P8X-ti-s7N">
@@ -234,6 +276,5 @@
     <resources>
         <image name="CastiPinwheel" width="250" height="246"/>
         <image name="Checkmark" width="490" height="490"/>
-        <image name="Thumba" width="500" height="500"/>
     </resources>
 </document>
