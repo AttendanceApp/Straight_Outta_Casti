@@ -7,16 +7,25 @@
 //
 
 import UIKit
+import UserNotifications
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    //MARK: Variables
     var window: UIWindow?
+    
     let stateController = StateController(accountStorage: AccountStorage())
+    
     let geofence: Geofence = Geofence(latitudeDeadband: Constants.Geolocation.latitudeDeadband, longitudeDeadband: Constants.Geolocation.longitudeDeadband, targetLatitude: Constants.Geolocation.castiLatitude, targetLongitude: Constants.Geolocation.castiLongitude)
+    
+    let center = UNUserNotificationCenter.current()
+    let options: UNAuthorizationOptions = [.alert, .sound];
+    let content = UNMutableNotificationContent()
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        //MARK: Starting ViewController
         // If not on Casti, app doesn't work, if on Casti, register or direct to sign out screen
         let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
 //        if !geofence.inCasti {
@@ -35,6 +44,35 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             self.window?.makeKeyAndVisible()
             self.window?.rootViewController = signOutController
         }
+        
+        //MARK: LocalNotifications
+        center.requestAuthorization(options: options) {
+            (granted, error) in
+            if granted {
+                self.stateController.allowNotifications = true
+            } else {
+                self.stateController.allowNotifications = false
+            }
+        }
+        center.getNotificationSettings { (settings) in
+            if settings.authorizationStatus == .authorized {
+                self.stateController.allowNotifications = true
+            } else {
+                self.stateController.allowNotifications = false
+            }
+        }
+        content.title = "Don't forget to sign in! :)"
+        content.body = "Welcome back to campus."
+        content.sound = UNNotificationSound.default()
+        let trigger = UNLocationNotificationTrigger(region: geofence.region, repeats: false)
+        let identifier = "UYLLocalNotification"
+        let request = UNNotificationRequest(identifier: identifier,
+                                            content: content, trigger: trigger)
+        center.add(request, withCompletionHandler: { (error) in
+            if let error = error {
+                print (error)
+            }
+        })
 
         return true
     }
