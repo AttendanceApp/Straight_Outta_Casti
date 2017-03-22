@@ -16,8 +16,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
     let stateController = StateController(accountStorage: AccountStorage())
+    let date = Date()
     
-    let geofence: Geofence = Geofence(latitudeDeadband: Constants.Geolocation.latitudeDeadband, longitudeDeadband: Constants.Geolocation.longitudeDeadband, targetLatitude: Constants.Geolocation.castiLatitude, targetLongitude: Constants.Geolocation.castiLongitude)
+    let geofence: Geofence = Geofence(deadband: Constants.Geolocation.deadband, targetLatitude: Constants.Geolocation.castiLatitude, targetLongitude: Constants.Geolocation.castiLongitude)
     
     let center = UNUserNotificationCenter.current()
     let options: UNAuthorizationOptions = [.alert, .sound];
@@ -44,6 +45,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             self.window?.makeKeyAndVisible()
             self.window?.rootViewController = signOutController
         }
+        
+        let calendar = Calendar.current
+        let hour = calendar.component(.hour, from: date)
+        let minutes = calendar.component(.minute, from: date)
         
         //MARK: LocalNotifications
         center.requestAuthorization(options: options) {
@@ -73,6 +78,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 print (error)
             }
         })
+        if (hour >= 15 && minutes >= 15) {
+            center.removeAllPendingNotificationRequests()
+        }
 
         return true
     }
