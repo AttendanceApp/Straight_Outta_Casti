@@ -454,7 +454,7 @@
 				DEVELOPMENT_TEAM = 8984R3D46R;
 				INFOPLIST_FILE = "Straight Outta Casti/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "attendance.Straight-Outta-Casti";
+				PRODUCT_BUNDLE_IDENTIFIER = "attendance.Straight-Outta-Casti-Drew";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -467,7 +467,7 @@
 				DEVELOPMENT_TEAM = 8984R3D46R;
 				INFOPLIST_FILE = "Straight Outta Casti/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "attendance.Straight-Outta-Casti";
+				PRODUCT_BUNDLE_IDENTIFIER = "attendance.Straight-Outta-Casti-Drew";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
