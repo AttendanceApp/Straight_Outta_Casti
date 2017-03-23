@@ -45,7 +45,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             self.window?.makeKeyAndVisible()
             self.window?.rootViewController = signOutController
         }
-        
+
+        return true
+    }
+
+    func applicationWillResignActive(_ application: UIApplication) {
+        // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
+        // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
         let calendar = Calendar.current
         let hour = calendar.component(.hour, from: date)
         let minutes = calendar.component(.minute, from: date)
@@ -66,28 +72,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 self.stateController.allowNotifications = false
             }
         }
-        content.title = "Don't forget to sign in! :)"
-        content.body = "Welcome back to campus."
-        content.sound = UNNotificationSound.default()
-        let trigger = UNLocationNotificationTrigger(region: geofence.region, repeats: false)
-        let identifier = "UYLLocalNotification"
-        let request = UNNotificationRequest(identifier: identifier,
-                                            content: content, trigger: trigger)
-        center.add(request, withCompletionHandler: { (error) in
-            if let error = error {
-                print (error)
+        if (self.stateController.wantNotifications) {
+            content.title = "Don't forget to sign in! :)"
+            content.body = "Welcome back to campus."
+            content.sound = UNNotificationSound.default()
+            let trigger = UNLocationNotificationTrigger(region: geofence.region, repeats: false)
+            let identifier = "UYLLocalNotification"
+            let request = UNNotificationRequest(identifier: identifier,
+                                                content: content, trigger: trigger)
+            center.add(request, withCompletionHandler: { (error) in
+                if let error = error {
+                    print (error)
+                }
+            })
+            if (hour >= 15 && minutes >= 15) {
+                center.removeAllPendingNotificationRequests()
             }
-        })
-        if (hour >= 15 && minutes >= 15) {
-            center.removeAllPendingNotificationRequests()
         }
-
-        return true
-    }
-
-    func applicationWillResignActive(_ application: UIApplication) {
-        // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-        // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
     }
 
     func applicationDidEnterBackground(_ application: UIApplication) {

@@ -203,10 +203,10 @@
             </objects>
             <point key="canvasLocation" x="1377" y="-1198"/>
         </scene>
-        <!--View Controller-->
+        <!--Done View Controller-->
         <scene sceneID="P8X-ti-s7N">
             <objects>
-                <viewController id="VvV-Bc-BLc" sceneMemberID="viewController">
+                <viewController id="VvV-Bc-BLc" customClass="DoneViewController" customModule="Straight_Outta_Casti" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="mSR-E7-lwe"/>
                         <viewControllerLayoutGuide type="bottom" id="nZN-bh-l7U"/>
@@ -236,11 +236,17 @@
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oe1-f2-DkP">
                                 <rect key="frame" x="255" y="460" width="51" height="31"/>
+                                <connections>
+                                    <action selector="reminderSwitch:" destination="VvV-Bc-BLc" eventType="valueChanged" id="O3d-rq-lSU"/>
+                                </connections>
                             </switch>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AK1-SX-7Lr">
                                 <rect key="frame" x="94" y="529" width="184" height="47"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <state key="normal" title="Sign out again"/>
+                                <connections>
+                                    <segue destination="jKp-st-cq4" kind="presentation" id="h6d-XH-Ukt"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -257,6 +263,9 @@
                             <constraint firstItem="oYA-Rn-ro9" firstAttribute="top" secondItem="bd8-ho-0LD" secondAttribute="bottom" constant="71" id="sfg-hR-j45"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="reminder" destination="oe1-f2-DkP" id="irj-zB-aqt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d0M-fo-MUY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -266,4 +275,7 @@
     <resources>
         <image name="Checkmark" width="490" height="490"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="h6d-XH-Ukt"/>
+    </inferredMetricsTieBreakers>
 </document>
