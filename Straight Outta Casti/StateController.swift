@@ -11,8 +11,12 @@ import Foundation
 class StateController {
     fileprivate let accountStorage: AccountStorage
     fileprivate(set) var accounts: [Account]
+    var allowNotifications: Bool
+    var wantNotifications: Bool
     
     init(accountStorage: AccountStorage) {
+        self.allowNotifications = false
+        self.wantNotifications = true
         self.accountStorage = accountStorage
         self.accounts = accountStorage.fetchAccounts()
     }
