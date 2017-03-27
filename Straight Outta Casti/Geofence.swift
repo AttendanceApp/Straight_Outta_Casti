@@ -12,16 +12,16 @@ import CoreLocation
 class Geofence: NSObject, CLLocationManagerDelegate {
     let locationManager = CLLocationManager()
     public var inCasti: Bool = false
-    let latitudeDeadband: Double
-    let longitudeDeadband: Double
+    let deadband: Double
     let targetLatitude: Double
     let targetLongitude: Double
+    let region: CLCircularRegion
     
-    init (latitudeDeadband: Double, longitudeDeadband: Double, targetLatitude: Double, targetLongitude: Double) {
-        self.latitudeDeadband = latitudeDeadband
-        self.longitudeDeadband = longitudeDeadband
+    init (deadband: Double, targetLatitude: Double, targetLongitude: Double) {
+        self.deadband = deadband
         self.targetLatitude = targetLatitude
         self.targetLongitude = targetLongitude
+        self.region = CLCircularRegion(center: CLLocationCoordinate2D(latitude: targetLatitude, longitude: targetLongitude), radius: deadband, identifier: "circle")
         super.init()
         self.locationManager.requestAlwaysAuthorization()
         if (CLLocationManager.locationServicesEnabled()) {
@@ -29,16 +29,15 @@ class Geofence: NSObject, CLLocationManagerDelegate {
             locationManager.startUpdatingLocation()
             locationManager.desiredAccuracy = kCLLocationAccuracyBest
             locationManager.allowsBackgroundLocationUpdates = true
+            locationManager.startMonitoring(for: region)
         }
     }
     
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        let lastLatitude = locations[locations.count-1].coordinate.latitude
-        let lastLongitude = locations[locations.count-1].coordinate.longitude
-        inCasti = ((abs(lastLatitude - targetLatitude)) <= longitudeDeadband || (abs(lastLongitude - targetLongitude) <= longitudeDeadband))
-        print("Latitude:", lastLatitude, "Longitude:", lastLongitude)
-        print("Latitude Difference:", abs(lastLatitude - targetLatitude))
-        print("Longitude Difference:", abs(lastLongitude - targetLongitude))
-        print()
+    func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
+        inCasti = true
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didExitRegion region: CLRegion) {
+        inCasti = false
     }
 }

@@ -16,6 +16,7 @@
 		4717EF5A1E56607600C1144F /* Straight_Outta_CastiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4717EF591E56607600C1144F /* Straight_Outta_CastiTests.swift */; };
 		4717EF651E56607600C1144F /* Straight_Outta_CastiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4717EF641E56607600C1144F /* Straight_Outta_CastiUITests.swift */; };
 		4717EF731E56609300C1144F /* Geofence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4717EF721E56609300C1144F /* Geofence.swift */; };
+		471A95B81E842BB900659CF8 /* DoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471A95B71E842BB900659CF8 /* DoneViewController.swift */; };
 		47870F6E1E6E10B000AA5375 /* StateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47870F6D1E6E10B000AA5375 /* StateController.swift */; };
 		478796D51E770C59001EC523 /* OutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478796D41E770C59001EC523 /* OutViewController.swift */; };
 		47F0F2FE1E6880E50035B907 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F0F2FD1E6880E50035B907 /* Account.swift */; };
@@ -58,6 +59,7 @@
 		4717EF641E56607600C1144F /* Straight_Outta_CastiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Straight_Outta_CastiUITests.swift; sourceTree = "<group>"; };
 		4717EF661E56607600C1144F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4717EF721E56609300C1144F /* Geofence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Geofence.swift; sourceTree = "<group>"; };
+		471A95B71E842BB900659CF8 /* DoneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoneViewController.swift; sourceTree = "<group>"; };
 		47870F6D1E6E10B000AA5375 /* StateController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StateController.swift; sourceTree = "<group>"; };
 		478796D41E770C59001EC523 /* OutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OutViewController.swift; sourceTree = "<group>"; };
 		47F0F2FD1E6880E50035B907 /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 				47FBB4C31E57AAFA0070C504 /* Constants.swift */,
 				47F0F3011E6884290035B907 /* RegisterViewController.swift */,
 				478796D41E770C59001EC523 /* OutViewController.swift */,
+				471A95B71E842BB900659CF8 /* DoneViewController.swift */,
 				47F0F2FD1E6880E50035B907 /* Account.swift */,
 				47F0F2FF1E6882AB0035B907 /* AccountStorage.swift */,
 				78C036211E687DA300FD3BE9 /* GoogleFormsConnection.swift */,
@@ -293,6 +296,7 @@
 				47F0F2FE1E6880E50035B907 /* Account.swift in Sources */,
 				47F0F3021E6884290035B907 /* RegisterViewController.swift in Sources */,
 				478796D51E770C59001EC523 /* OutViewController.swift in Sources */,
+				471A95B81E842BB900659CF8 /* DoneViewController.swift in Sources */,
 				47F0F3001E6882AB0035B907 /* AccountStorage.swift in Sources */,
 				47870F6E1E6E10B000AA5375 /* StateController.swift in Sources */,
 				78C036221E687DA300FD3BE9 /* GoogleFormsConnection.swift in Sources */,
