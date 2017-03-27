@@ -31,13 +31,11 @@ class Geofence: NSObject, CLLocationManagerDelegate {
             locationManager.allowsBackgroundLocationUpdates = true
             locationManager.startMonitoring(for: region)
         }
+        region.notifyOnEntry = true
+        region.notifyOnExit = false
     }
     
-    func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
-        inCasti = true
-    }
-    
-    func locationManager(_ manager: CLLocationManager, didExitRegion region: CLRegion) {
-        inCasti = false
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        inCasti = region.contains(locations[locations.count-1].coordinate)
     }
 }
