@@ -242,6 +242,9 @@
                                 <rect key="frame" x="94" y="529" width="184" height="47"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <state key="normal" title="Sign out again"/>
+                                <connections>
+                                    <segue destination="jKp-st-cq4" kind="show" identifier="signOutAgain" id="9Yh-pR-4IK"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -267,4 +270,7 @@
     <resources>
         <image name="Checkmark" width="490" height="490"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="9Yh-pR-4IK"/>
+    </inferredMetricsTieBreakers>
 </document>
