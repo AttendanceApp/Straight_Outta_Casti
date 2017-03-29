@@ -26,7 +26,7 @@ class Thumba {
         // The Refresh button will let us to repeat the login process so many times as we want
     }
     
-    @objc func updateUI() {
+    @objc func updateUI(outViewController: OutViewController) {
         var policy: LAPolicy?
         // Depending the iOS version we'll need to choose the policy we are able to use
         if #available(iOS 9.0, *) {
@@ -43,32 +43,43 @@ class Thumba {
         var err: NSError?
         
         // Check if the user is able to use the policy we've selected previously
-        
-        
-        loginProcess(policy: policy!)
-    }
-    
-    private func loginProcess(policy: LAPolicy) {
-        // Start evaluation process with a callback that is executed when the user ends the process successfully or not
-        context.evaluatePolicy(policy, localizedReason: kMsgShowReason) { (success, error) in
-            DispatchQueue.main.async {
-                UIView.animate(withDuration: 0.5, animations: {
-                })
-            }
+        guard context.canEvaluatePolicy(policy!, error: &err) else {
+            
+            return
         }
+        
+        // Print success
+        loginProcess(policy: policy!, outViewController: outViewController)
     }
     
+    private func loginProcess(policy: LAPolicy, outViewController: OutViewController) {
+        context.evaluatePolicy(policy, localizedReason: kMsgShowReason, reply: {
+            (success, error) in DispatchQueue.main.async {
+                UIView.animate(withDuration: 0.5, animations: {})
+            }
+            guard success else {
+                guard let error = error else {
+                    return
+                }
+                return
+            }
+            let account = outViewController.stateController.get()
+            GoogleFormsConnection.doMyBidNiss(firstName: account.firstName, lastName: account.lastName, reason: outViewController.reason.text!)
+            outViewController.performSegue(withIdentifier: "done", sender: nil)
+        })
+        
+    }
+        
     
     
-    func resetContextState() {
+    //func resetContextState() {
         // Initialize our context object just in this example, in a real app it shouldn't be necessary. In fact, we should avoid this initialization
         // The reason is because once our LAContext detects that the login was successfully done, it won't let us repeat the login process again
-        self.context = LAContext()
+        //self.context = LAContext()
         
         
-        
-        self.updateUI()
-    }
+        //self.updateUI()
+    //}
     
     
     

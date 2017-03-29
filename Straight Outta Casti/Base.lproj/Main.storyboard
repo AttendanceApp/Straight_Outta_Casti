@@ -156,6 +156,7 @@
                     </view>
                     <connections>
                         <outlet property="reason" destination="ith-kK-9zc" id="YjM-ff-Wgu"/>
+                        <segue destination="VvV-Bc-BLc" kind="presentation" identifier="done" id="wGt-eV-j38"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xbz-El-ERY" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -240,7 +241,7 @@
                                     <color key="titleColor" red="0.38039215686274508" green="0.45882352941176469" blue="0.74117647058823533" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="jKp-st-cq4" kind="presentation" id="h6d-XH-Ukt"/>
+                                    <action selector="signOutAgain:" destination="VvV-Bc-BLc" eventType="touchUpInside" id="Q6N-S7-zzv"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -259,7 +260,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="reminder" destination="oe1-f2-DkP" id="irj-zB-aqt"/>
+                        <segue destination="jKp-st-cq4" kind="show" identifier="signOutAgain" id="NvE-nZ-cJg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d0M-fo-MUY" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -271,6 +272,6 @@
         <image name="Checkmark" width="490" height="490"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="h6d-XH-Ukt"/>
+        <segue reference="NvE-nZ-cJg"/>
     </inferredMetricsTieBreakers>
 </document>
