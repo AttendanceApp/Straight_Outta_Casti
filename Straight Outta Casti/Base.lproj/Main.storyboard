@@ -233,7 +233,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <state key="normal" title="Sign out again"/>
                                 <connections>
-                                    <segue destination="jKp-st-cq4" kind="show" identifier="signOutAgain" id="9Yh-pR-4IK"/>
+                                    <action selector="signOutAgain:" destination="VvV-Bc-BLc" eventType="touchUpInside" id="Q6N-S7-zzv"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -252,7 +252,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="reminder" destination="oe1-f2-DkP" id="irj-zB-aqt"/>
+                        <segue destination="jKp-st-cq4" kind="show" identifier="signOutAgain" id="NvE-nZ-cJg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d0M-fo-MUY" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -264,6 +264,6 @@
         <image name="Checkmark" width="490" height="490"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="9Yh-pR-4IK"/>
+        <segue reference="NvE-nZ-cJg"/>
     </inferredMetricsTieBreakers>
 </document>
