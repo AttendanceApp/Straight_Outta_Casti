@@ -39,15 +39,23 @@ class OutViewController: UIViewController {
         }
     }
     
-    // create the alert
-    let alert = UIAlertController(title: "UIAlertController", message: "Would you like to continue learning how to use iOS alerts?", preferredStyle: UIAlertControllerStyle.alert)
-    
-    // add the actions (buttons)
-    alert.addAction(UIAlertAction(title: "Continue", style: UIAlertActionStyle.default, handler: nil))
-    alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler: nil))
-    
-    // show the alert
-    self.present(alert, animated: true, completion: nil)
+    func showAlert() {
+        // create the alert
+        let alert = UIAlertController(title: "Sign Out Successful", message: "Would you like A reminder to sign in?", preferredStyle: UIAlertControllerStyle.alert)
+        
+        
+        let image = UIImage(named: "Checkmark")
+        let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+        action.setValue(image, forKey: "image")
+        
+        // add the actions
+        alert.addAction(action)
+        alert.addAction(UIAlertAction(title: "Remind Me", style: UIAlertActionStyle.default, handler: nil))
+        alert.addAction(UIAlertAction(title: "I'll Remember", style: UIAlertActionStyle.cancel, handler: nil))
+        
+        // show the alert
+        self.present(alert, animated: true, completion: nil)
+    }
 
     
     /*
