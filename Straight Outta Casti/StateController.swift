@@ -16,7 +16,7 @@ class StateController {
     
     init(accountStorage: AccountStorage) {
         self.allowNotifications = false
-        self.wantNotifications = true
+        self.wantNotifications = false
         self.accountStorage = accountStorage
         self.accounts = accountStorage.fetchAccounts()
     }
