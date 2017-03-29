@@ -55,7 +55,16 @@ class OutViewController: UIViewController {
         // show the alert
         self.present(alert, animated: true, completion: nil)
     }
+    
+    func hideKeyboardWhenTappedAround() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        view.addGestureRecognizer(tap)
+    }
 
+    
+    func dismissKeyboard() {
+        view.endEditing(true)
+    }
     
     /*
      // MARK: - Navigation
