@@ -14,6 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     //MARK: Variables
     var window: UIWindow?
+    var notification: Notification?
     
     let stateController = StateController(accountStorage: AccountStorage())
     let geofence: Geofence = Geofence(deadband: Constants.Geolocation.deadband, targetLatitude: Constants.Geolocation.castiLatitude, targetLongitude: Constants.Geolocation.castiLongitude)
@@ -38,6 +39,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             self.window?.makeKeyAndVisible()
             self.window?.rootViewController = signOutController
         }
+        
+        //MARK: Set up notification
+        notification = Notification(stateController: stateController)
+        notification?.requestAuth()
+        notification?.getSettings()
 
         return true
     }
@@ -48,10 +54,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let trigger = UNLocationNotificationTrigger(region: geofence.region, repeats: false)
 //        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 10, repeats: false)
-        let notification = Notification(stateController: stateController)
-        notification.requestAuth()
-        notification.getSettings()
-        notification.setNotification(trigger: trigger)
+        notification?.setNotification(trigger: trigger)
     }
 
     func applicationDidEnterBackground(_ application: UIApplication) {
