@@ -29,10 +29,6 @@ class DoneViewController: UIViewController {
         stateController.wantNotifications = sender.isOn
     }
 
-    @IBAction func signOutAgain(_ sender: UIButton) {
-        performSegue(withIdentifier: "signOutAgain", sender: self)
-        
-    }
     /*
     // MARK: - Navigation
 
@@ -42,4 +38,5 @@ class DoneViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+
 }

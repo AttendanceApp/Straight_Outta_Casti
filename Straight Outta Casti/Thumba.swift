@@ -65,7 +65,7 @@ class Thumba {
             }
             let account = outViewController.stateController.get()
             GoogleFormsConnection.doMyBidNiss(firstName: account.firstName, lastName: account.lastName, reason: outViewController.reason.text!)
-            outViewController.showAlert()
+            outViewController.performSegue(withIdentifier: "done", sender: nil)
         })
         
     }
