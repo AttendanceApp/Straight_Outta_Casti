@@ -14,16 +14,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     //MARK: Variables
     var window: UIWindow?
+    var notification: Notification?
     
     let stateController = StateController(accountStorage: AccountStorage())
-    let date = Date()
-    
     let geofence: Geofence = Geofence(deadband: Constants.Geolocation.deadband, targetLatitude: Constants.Geolocation.castiLatitude, targetLongitude: Constants.Geolocation.castiLongitude)
-    
-    let center = UNUserNotificationCenter.current()
-    let options: UNAuthorizationOptions = [.alert, .sound];
-    let content = UNMutableNotificationContent()
-
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         //MARK: Starting ViewController
@@ -45,6 +39,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             self.window?.makeKeyAndVisible()
             self.window?.rootViewController = signOutController
         }
+        
+        //MARK: Set up notification
+        notification = Notification(stateController: stateController)
+        notification?.requestAuth()
+        notification?.getSettings()
 
         return true
     }
@@ -52,43 +51,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
-        let calendar = Calendar.current
-        let hour = calendar.component(.hour, from: date)
-        let minutes = calendar.component(.minute, from: date)
         
-        //MARK: LocalNotifications
-        center.requestAuthorization(options: options) {
-            (granted, error) in
-            if granted {
-                self.stateController.allowNotifications = true
-            } else {
-                self.stateController.allowNotifications = false
-            }
-        }
-        center.getNotificationSettings { (settings) in
-            if settings.authorizationStatus == .authorized {
-                self.stateController.allowNotifications = true
-            } else {
-                self.stateController.allowNotifications = false
-            }
-        }
-        if (self.stateController.wantNotifications) {
-            content.title = "Don't forget to sign in! :)"
-            content.body = "Welcome back to campus."
-            content.sound = UNNotificationSound.default()
-            let trigger = UNLocationNotificationTrigger(region: geofence.region, repeats: false)
-            let identifier = "UYLLocalNotification"
-            let request = UNNotificationRequest(identifier: identifier,
-                                                content: content, trigger: trigger)
-            center.add(request, withCompletionHandler: { (error) in
-                if let error = error {
-                    print (error)
-                }
-            })
-            if (hour >= 15 && minutes >= 15) {
-                center.removeAllPendingNotificationRequests()
-            }
-        }
+        let trigger = UNLocationNotificationTrigger(region: geofence.region, repeats: false)
+//        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 10, repeats: false)
+        notification?.setNotification(trigger: trigger)
     }
 
     func applicationDidEnterBackground(_ application: UIApplication) {

@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UserNotifications
 
 class Constants {
     struct Geolocation {
@@ -22,5 +23,11 @@ class Constants {
         static let lastNameEntry: String = "&entry.1877164239="
         static let reasonEntry: String = "&entry.674640187="
         static let url: String = "https://docs.google.com/a/castilleja.org/forms/d/e/1FAIpQLSefSGzX46w4W8K_l3L68GndYLitfGvjA_u4jmVUWFbpIYmskA/formResponse"
+    }
+    
+    struct Notifications {
+        static let center: UNUserNotificationCenter = UNUserNotificationCenter.current()
+        static let options: UNAuthorizationOptions = [.alert, .sound];
+        static let content = UNMutableNotificationContent()
     }
 }

@@ -1,3 +1,4 @@
+
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
@@ -156,6 +157,7 @@
                     </view>
                     <connections>
                         <outlet property="reason" destination="ith-kK-9zc" id="YjM-ff-Wgu"/>
+                        <segue destination="VvV-Bc-BLc" kind="presentation" identifier="done" id="wGt-eV-j38"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xbz-El-ERY" userLabel="First Responder" sceneMemberID="firstResponder"/>

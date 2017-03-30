@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import UserNotifications
 
 class DoneViewController: UIViewController {
 
@@ -14,6 +15,7 @@ class DoneViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        stateController.wantNotifications = true
 
         // Do any additional setup after loading the view.
     }
