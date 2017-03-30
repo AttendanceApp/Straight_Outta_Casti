@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -196,83 +196,5 @@
             </objects>
             <point key="canvasLocation" x="1377" y="-1198"/>
         </scene>
-        <!--Done View Controller-->
-        <scene sceneID="P8X-ti-s7N">
-            <objects>
-                <viewController id="VvV-Bc-BLc" customClass="DoneViewController" customModule="Straight_Outta_Casti" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="mSR-E7-lwe"/>
-                        <viewControllerLayoutGuide type="bottom" id="nZN-bh-l7U"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="wUd-3X-zPe">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Done" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nr8-AT-dAt">
-                                <rect key="frame" x="129" y="91" width="115" height="54"/>
-                                <color key="tintColor" red="0.23137254901960785" green="0.25098039215686274" blue="0.27058823529411763" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="45"/>
-                                <color key="textColor" red="0.23137254901960785" green="0.25098039215686274" blue="0.27058823529411763" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Checkmark" translatesAutoresizingMaskIntoConstraints="NO" id="bd8-ho-0LD">
-                                <rect key="frame" x="90" y="202" width="192" height="192"/>
-                                <color key="tintColor" red="0.23137254901960785" green="0.25098039215686274" blue="0.27058823529411763" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="bd8-ho-0LD" secondAttribute="height" multiplier="1:1" id="7dX-mv-sB5"/>
-                                    <constraint firstAttribute="height" constant="192" id="oFF-mb-DdH"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign in reminder?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oYA-Rn-ro9">
-                                <rect key="frame" x="71" y="465" width="133" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.23137254901960785" green="0.25098039215686274" blue="0.27058823529411763" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oe1-f2-DkP">
-                                <rect key="frame" x="255" y="460" width="51" height="31"/>
-                                <connections>
-                                    <action selector="reminderSwitch:" destination="VvV-Bc-BLc" eventType="valueChanged" id="O3d-rq-lSU"/>
-                                </connections>
-                            </switch>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AK1-SX-7Lr">
-                                <rect key="frame" x="94" y="529" width="184" height="47"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
-                                <state key="normal" title="Sign out again">
-                                    <color key="titleColor" red="0.38039215686274508" green="0.45882352941176469" blue="0.74117647058823533" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="jKp-st-cq4" kind="presentation" id="h6d-XH-Ukt"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" red="0.87058823529411766" green="0.88235294117647056" blue="0.90588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="nZN-bh-l7U" firstAttribute="top" secondItem="AK1-SX-7Lr" secondAttribute="bottom" constant="91" id="20j-Rr-RaK"/>
-                            <constraint firstItem="bd8-ho-0LD" firstAttribute="top" secondItem="nr8-AT-dAt" secondAttribute="bottom" constant="57" id="2Lo-cL-UE2"/>
-                            <constraint firstItem="oe1-f2-DkP" firstAttribute="centerY" secondItem="oYA-Rn-ro9" secondAttribute="centerY" id="32P-RH-Jfj"/>
-                            <constraint firstItem="bd8-ho-0LD" firstAttribute="leading" secondItem="oYA-Rn-ro9" secondAttribute="trailing" constant="-113.5" id="3MZ-Hf-1de"/>
-                            <constraint firstItem="AK1-SX-7Lr" firstAttribute="centerX" secondItem="wUd-3X-zPe" secondAttribute="centerX" constant="-1.5" id="6lF-uv-z5R"/>
-                            <constraint firstItem="nr8-AT-dAt" firstAttribute="centerX" secondItem="wUd-3X-zPe" secondAttribute="centerX" constant="-1" id="7IC-j1-BJk"/>
-                            <constraint firstItem="bd8-ho-0LD" firstAttribute="centerX" secondItem="wUd-3X-zPe" secondAttribute="centerX" constant="-1.5" id="Gxg-UB-4bv"/>
-                            <constraint firstItem="nr8-AT-dAt" firstAttribute="top" secondItem="mSR-E7-lwe" secondAttribute="bottom" constant="71" id="jsm-CT-pzU"/>
-                            <constraint firstItem="oe1-f2-DkP" firstAttribute="leading" secondItem="oYA-Rn-ro9" secondAttribute="trailing" constant="51" id="m4o-Uc-1hr"/>
-                            <constraint firstItem="oYA-Rn-ro9" firstAttribute="top" secondItem="bd8-ho-0LD" secondAttribute="bottom" constant="71" id="sfg-hR-j45"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="reminder" destination="oe1-f2-DkP" id="irj-zB-aqt"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="d0M-fo-MUY" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1640.8" y="23.838080959520241"/>
-        </scene>
     </scenes>
-    <resources>
-        <image name="Checkmark" width="490" height="490"/>
-    </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="h6d-XH-Ukt"/>
-    </inferredMetricsTieBreakers>
 </document>
