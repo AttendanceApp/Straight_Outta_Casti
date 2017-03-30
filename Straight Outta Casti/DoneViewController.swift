@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import UserNotifications
 
 class DoneViewController: UIViewController {
 
@@ -14,6 +15,7 @@ class DoneViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        stateController.wantNotifications = true
 
         // Do any additional setup after loading the view.
     }
@@ -27,10 +29,6 @@ class DoneViewController: UIViewController {
         stateController.wantNotifications = sender.isOn
     }
 
-    @IBAction func signOutAgain(_ sender: UIButton) {
-        performSegue(withIdentifier: "signOutAgain", sender: self)
-        
-    }
     /*
     // MARK: - Navigation
 
@@ -40,4 +38,5 @@ class DoneViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+
 }

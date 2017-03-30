@@ -32,30 +32,10 @@ class OutViewController: UIViewController {
         }
     }
     
-    func showAlert() {
-        // create the alert
-        let alert = UIAlertController(title: "Sign Out Successful", message: "Would you like a reminder to sign in?", preferredStyle: UIAlertControllerStyle.alert)
-        
-        
-        let image = UIImage(named: "Checkmark")
-        var imageView = UIImageView(frame: CGRect(x: 3, y: 3, width: 40, height: 40))
-        imageView.image = image
-        
-        alert.view.addSubview(imageView)
-        
-        // add the actions
-        alert.addAction(UIAlertAction(title: "Remind Me", style: UIAlertActionStyle.cancel, handler: nil))
-        alert.addAction(UIAlertAction(title: "I'll Remember", style: UIAlertActionStyle.default, handler: nil))
-        
-        // show the alert
-        self.present(alert, animated: true, completion: nil)
-    }
-    
     func hideKeyboardWhenTappedAround() {
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         view.addGestureRecognizer(tap)
     }
-
     
     func dismissKeyboard() {
         view.endEditing(true)
