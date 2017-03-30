@@ -177,11 +177,11 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You may not sign out because you are not on the Castilleja campus." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cEJ-Ti-C4i">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="30"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.30277401208877563" green="0.31727638840675354" blue="0.33734852075576782" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.87119454145431519" green="0.88190901279449463" blue="0.90197288990020752" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="cEJ-Ti-C4i" firstAttribute="centerX" secondItem="ztK-uz-v1V" secondAttribute="centerX" id="040-DH-F3F"/>
                             <constraint firstItem="cEJ-Ti-C4i" firstAttribute="width" secondItem="ztK-uz-v1V" secondAttribute="width" id="UKQ-f7-nMc"/>
@@ -192,7 +192,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BEd-JX-ljk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1377" y="-1198"/>
+            <point key="canvasLocation" x="1578" y="-13"/>
         </scene>
     </scenes>
 </document>
