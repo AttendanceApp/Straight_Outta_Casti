@@ -14,8 +14,11 @@ class OutViewController: UIViewController {
     @IBOutlet weak var reason: UITextField!
     let thumba = Thumba()
     
+    @IBOutlet weak var doneButton: UIButton!
+    @IBOutlet weak var reasonTextBox: UITextField!
         
     override func viewDidLoad() {
+        doneButton.isHidden = true
         super.viewDidLoad()
         hideKeyboardWhenTappedAround()
     }
@@ -59,6 +62,7 @@ class OutViewController: UIViewController {
     
     func dismissKeyboard() {
         view.endEditing(true)
+        doneButton.isHidden = false
     }
     
     /*
