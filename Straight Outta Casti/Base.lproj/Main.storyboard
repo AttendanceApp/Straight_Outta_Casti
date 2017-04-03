@@ -157,7 +157,6 @@
                     <connections>
                         <outlet property="doneButton" destination="4B4-Bv-pSH" id="bSd-9e-z65"/>
                         <outlet property="reason" destination="ith-kK-9zc" id="YjM-ff-Wgu"/>
-                        <outlet property="reasonTextBox" destination="ith-kK-9zc" id="hda-o3-CWe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xbz-El-ERY" userLabel="First Responder" sceneMemberID="firstResponder"/>
