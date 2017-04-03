@@ -20,6 +20,7 @@ class OutViewController: UIViewController, UITextFieldDelegate {
         doneButton.isHidden = true
         super.viewDidLoad()
         hideKeyboardWhenTappedAround()
+        self.reason.delegate = self
     }
     
     override func didReceiveMemoryWarning() {
@@ -32,6 +33,7 @@ class OutViewController: UIViewController, UITextFieldDelegate {
             thumba.setupController()
             thumba.updateUI(outViewController: self)
             reason.text = ""
+            doneButton.isHidden = true
         }
     }
     
@@ -67,7 +69,9 @@ class OutViewController: UIViewController, UITextFieldDelegate {
     
     func dismissKeyboard() {
         view.endEditing(true)
-        doneButton.isHidden = false
+        if reason != nil {
+            doneButton.isHidden = false
+        }
     }
     
     /*
