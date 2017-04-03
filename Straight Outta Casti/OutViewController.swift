@@ -14,7 +14,7 @@ class OutViewController: UIViewController {
     @IBOutlet weak var reason: UITextField!
     let thumba = Thumba()
     
-        
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         hideKeyboardWhenTappedAround()
@@ -28,7 +28,7 @@ class OutViewController: UIViewController {
     @IBAction func done(_ sender: UIButton) {
         if reason.text != nil {
             thumba.setupController()
-            thumba.updateUI(outViewController: self) 
+            thumba.updateUI(outViewController: self)
         }
     }
     
@@ -44,13 +44,12 @@ class OutViewController: UIViewController {
         alert.view.addSubview(imageView)
         
         // add the actions
-        alert.addAction(UIAlertAction(title: "Remind Me", style: UIAlertActionStyle.cancel, handler: nil))
-        alert.addAction(UIAlertAction(title: "I'll Remember", style: UIAlertActionStyle.default, handler: nil))
+        alert.addAction(UIAlertAction(title: "Remind Me", style: UIAlertActionStyle.cancel, handler: {action -> () in self.stateController.wantNotifications = true}))
+        alert.addAction(UIAlertAction(title: "I'll Remember", style: UIAlertActionStyle.default, handler: {action -> () in self.stateController.wantNotifications = true}))
         
         // show the alert
         self.present(alert, animated: true, completion: nil)
     }
-
     
     func hideKeyboardWhenTappedAround() {
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
