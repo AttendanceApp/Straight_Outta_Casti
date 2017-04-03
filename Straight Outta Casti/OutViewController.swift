@@ -8,14 +8,13 @@
 
 import UIKit
 
-class OutViewController: UIViewController {
+class OutViewController: UIViewController, UITextFieldDelegate {
     
     var stateController: StateController!
     @IBOutlet weak var reason: UITextField!
     let thumba = Thumba()
     
     @IBOutlet weak var doneButton: UIButton!
-    @IBOutlet weak var reasonTextBox: UITextField!
         
     override func viewDidLoad() {
         doneButton.isHidden = true
@@ -31,8 +30,14 @@ class OutViewController: UIViewController {
     @IBAction func done(_ sender: UIButton) {
         if reason.text != nil {
             thumba.setupController()
-            thumba.updateUI(outViewController: self) 
+            thumba.updateUI(outViewController: self)
+            reason.text = ""
         }
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        dismissKeyboard()
+        return false
     }
     
     func showAlert() {
