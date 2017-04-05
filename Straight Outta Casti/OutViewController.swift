@@ -8,16 +8,19 @@
 
 import UIKit
 
-class OutViewController: UIViewController {
+class OutViewController: UIViewController, UITextFieldDelegate {
     
     var stateController: StateController!
     @IBOutlet weak var reason: UITextField!
     let thumba = Thumba()
     
+    @IBOutlet weak var doneButton: UIButton!
         
     override func viewDidLoad() {
+        doneButton.isHidden = true
         super.viewDidLoad()
         hideKeyboardWhenTappedAround()
+        self.reason.delegate = self
     }
     
     override func didReceiveMemoryWarning() {
@@ -28,8 +31,15 @@ class OutViewController: UIViewController {
     @IBAction func done(_ sender: UIButton) {
         if reason.text != nil {
             thumba.setupController()
-            thumba.updateUI(outViewController: self) 
+            thumba.updateUI(outViewController: self)
+            reason.text = ""
+            doneButton.isHidden = true
         }
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        dismissKeyboard()
+        return false
     }
     
     func showAlert() {
@@ -59,6 +69,9 @@ class OutViewController: UIViewController {
     
     func dismissKeyboard() {
         view.endEditing(true)
+        if reason != nil {
+            doneButton.isHidden = false
+        }
     }
     
     /*
