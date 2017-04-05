@@ -13,6 +13,7 @@ class OutViewController: UIViewController, UITextFieldDelegate {
     var stateController: StateController!
     @IBOutlet weak var reason: UITextField!
     let thumba = Thumba()
+    let geofence: Geofence = Geofence(deadband: Constants.Geolocation.deadband, targetLatitude: Constants.Geolocation.castiLatitude, targetLongitude: Constants.Geolocation.castiLongitude)
     
     @IBOutlet weak var doneButton: UIButton!
         
@@ -29,7 +30,7 @@ class OutViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func done(_ sender: UIButton) {
-        if reason.text != nil {
+        if (reason.text != nil && geofence.inCasti) {
             thumba.setupController()
             thumba.updateUI(outViewController: self)
             reason.text = ""
