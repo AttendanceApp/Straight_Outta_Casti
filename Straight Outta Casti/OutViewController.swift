@@ -43,7 +43,20 @@ class OutViewController: UIViewController, UITextFieldDelegate {
         return false
     }
     
-    func showAlert() {
+    
+    func showNotCastiAlert() {
+        // create the alert
+        let alert = UIAlertController(title: "Sign Out NOT Successful", message: "You are not on campus. If you have left campus without signing out, please email dcampbell@castilleja.org ASAP!", preferredStyle: UIAlertControllerStyle.alert)
+        
+        // add the actions
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+        
+        // show the alert
+        self.present(alert, animated: true, completion: nil)
+    }
+
+    
+    func showSignOutAlert() {
         // create the alert
         let alert = UIAlertController(title: "Sign Out Successful", message: "Would you like a reminder to sign in?", preferredStyle: UIAlertControllerStyle.alert)
         

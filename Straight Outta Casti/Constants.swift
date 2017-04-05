@@ -11,9 +11,9 @@ import UserNotifications
 
 class Constants {
     struct Geolocation {
-        static let castiLatitude: Double = 37.438696
-        static let castiLongitude: Double = -122.152208
-        static let deadband: Double = 0.005
+        static let castiLatitude: Double = 37.4386964
+        static let castiLongitude: Double = -122.152027
+        static let deadband: Double = 0.001354
     }
     
     struct GoogleForms {
