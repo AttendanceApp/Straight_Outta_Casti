@@ -23,12 +23,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //MARK: Starting ViewController
         // If not on Casti, app doesn't work, if on Casti, register or direct to sign out screen
         let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-//        if !geofence.inCasti {
-//            let geoDisabledController = storyboard.instantiateViewController(withIdentifier: "GeoDisabledViewController") as! GeoDisabledViewController
-//            self.window?.makeKeyAndVisible()
-//            self.window?.rootViewController = geoDisabledController
-//        } else 
-        if !stateController.hasUserInfo() {
+        if !geofence.inCasti {
+            let geoDisabledController = storyboard.instantiateViewController(withIdentifier: "GeoDisabledViewController") as! GeoDisabledViewController
+            self.window?.makeKeyAndVisible()
+            self.window?.rootViewController = geoDisabledController
+        } else if !stateController.hasUserInfo() {
             let registerController = storyboard.instantiateViewController(withIdentifier: "RegisterViewController") as! RegisterViewController
             registerController.stateController = self.stateController
             self.window?.makeKeyAndVisible()
