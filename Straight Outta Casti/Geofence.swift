@@ -36,6 +36,16 @@ class Geofence: NSObject, CLLocationManagerDelegate {
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        inCasti = region.contains(locations[locations.count-1].coordinate)
+//        inCasti = region.contains(locations[locations.count-1].coordinate)
+//        print (locations[locations.count-1].coordinate)
+//        print (inCasti)
+//        print (region.center)
+//        print ()
+        let currentLatitude = locations[locations.count-1].coordinate.latitude
+        let currentLongitude = locations[locations.count-1].coordinate.longitude
+        inCasti = ((abs(currentLatitude - targetLatitude) <= deadband) && (abs(currentLongitude - targetLongitude) <= deadband))
+        print (currentLatitude - targetLatitude)
+        print (currentLongitude - targetLongitude)
+        print (inCasti)
     }
 }
