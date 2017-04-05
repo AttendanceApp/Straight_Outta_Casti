@@ -14,7 +14,7 @@ class Thumba {
     
     let kMsgShowReason = "Sign Out"
     
-    var context = LAContext()
+    var context: LAContext?
     
     deinit {
         Utils.removeObserverForNotifications(observer: self)
@@ -22,6 +22,7 @@ class Thumba {
     
     func setupController() {
         Utils.registerNotificationWillEnterForeground(observer: self, selector: #selector(Thumba.updateUI))
+        context = LAContext()
         
         // The Refresh button will let us to repeat the login process so many times as we want
     }
@@ -33,17 +34,17 @@ class Thumba {
             // iOS 9+ users with Biometric and Passcode verification
             // Is changing this to ...WithBiometrics necessary? Is it sufficient to set fallback title to empty? Are there any negative ramifications to using WithBiometrics?
             policy = .deviceOwnerAuthenticationWithBiometrics
-            context.localizedFallbackTitle = ""
+            context?.localizedFallbackTitle = ""
         } else {
             // iOS 8+ users with Biometric and Custom (Fallback button) verification
-            context.localizedFallbackTitle = ""
+            context?.localizedFallbackTitle = ""
             policy = .deviceOwnerAuthenticationWithBiometrics
         }
         
         var err: NSError?
         
         // Check if the user is able to use the policy we've selected previously
-        guard context.canEvaluatePolicy(policy!, error: &err) else {
+        guard (context?.canEvaluatePolicy(policy!, error: &err))! else {
             
             return
         }
@@ -53,7 +54,7 @@ class Thumba {
     }
     
     private func loginProcess(policy: LAPolicy, outViewController: OutViewController) {
-        context.evaluatePolicy(policy, localizedReason: kMsgShowReason, reply: {
+        context?.evaluatePolicy(policy, localizedReason: kMsgShowReason, reply: {
             (success, error) in DispatchQueue.main.async {
                 UIView.animate(withDuration: 0.5, animations: {})
             }
@@ -67,7 +68,7 @@ class Thumba {
             GoogleFormsConnection.doMyBidNiss(firstName: account.firstName, lastName: account.lastName, reason: outViewController.reason.text!)
             //present the alert
             outViewController.showSignOutAlert()
-            self.context = LAContext()
+            self.context?.invalidate()
         })
         
     }
