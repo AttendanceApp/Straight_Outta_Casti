@@ -67,6 +67,7 @@ class Thumba {
             GoogleFormsConnection.doMyBidNiss(firstName: account.firstName, lastName: account.lastName, reason: outViewController.reason.text!)
             //present the alert
             outViewController.showAlert()
+            self.context = LAContext()
         })
         
     }
