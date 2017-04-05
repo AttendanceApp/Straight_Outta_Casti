@@ -7,21 +7,54 @@
 //
 
 import UIKit
+import UserNotifications
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    //MARK: Variables
     var window: UIWindow?
-
+    var notification: Notification?
+    
+    let stateController = StateController(accountStorage: AccountStorage())
+    let geofence: Geofence = Geofence(deadband: Constants.Geolocation.deadband, targetLatitude: Constants.Geolocation.castiLatitude, targetLongitude: Constants.Geolocation.castiLongitude)
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        //MARK: Starting ViewController
+        // If not on Casti, app doesn't work, if on Casti, register or direct to sign out screen
+        let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+//        if !geofence.inCasti {
+//            let geoDisabledController = storyboard.instantiateViewController(withIdentifier: "GeoDisabledViewController") as! GeoDisabledViewController
+//            self.window?.makeKeyAndVisible()
+//            self.window?.rootViewController = geoDisabledController
+//        } else 
+        if !stateController.hasUserInfo() {
+            let registerController = storyboard.instantiateViewController(withIdentifier: "RegisterViewController") as! RegisterViewController
+            registerController.stateController = self.stateController
+            self.window?.makeKeyAndVisible()
+            self.window?.rootViewController = registerController
+        } else {
+            let signOutController = storyboard.instantiateViewController(withIdentifier: "OutViewController") as! OutViewController
+            signOutController.stateController = self.stateController
+            self.window?.makeKeyAndVisible()
+            self.window?.rootViewController = signOutController
+        }
+        
+        //MARK: Set up notification
+        notification = Notification(stateController: stateController)
+        notification?.requestAuth()
+        notification?.getSettings()
+
         return true
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
+        
+        let trigger = UNLocationNotificationTrigger(region: geofence.region, repeats: false)
+//        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 10, repeats: false)
+        notification?.setNotification(trigger: trigger)
     }
 
     func applicationDidEnterBackground(_ application: UIApplication) {
