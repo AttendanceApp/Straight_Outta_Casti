@@ -22,7 +22,7 @@ class Constants {
         static let firstNameEntry: String = "entry.42768537="
         static let lastNameEntry: String = "&entry.1877164239="
         static let reasonEntry: String = "&entry.674640187="
-        static let url: String = "https://docs.google.com/a/castilleja.org/forms/d/e/1FAIpQLSefSGzX46w4W8K_l3L68GndYLitfGvjA_u4jmVUWFbpIYmskA/formResponse"
+        static var url: String = "https://docs.google.com/a/castilleja.org/forms/d/e/1FAIpQLSefSGzX46w4W8K_l3L68GndYLitfGvjA_u4jmVUWFbpIYmskA/formResponse"
     }
     
     struct Notifications {

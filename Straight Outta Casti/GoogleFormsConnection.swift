@@ -32,6 +32,7 @@ class GoogleFormsConnection {
             print(strData)
             print(error)
             print(response)
+            print(myUrl)
         }
         task.resume()
     }
