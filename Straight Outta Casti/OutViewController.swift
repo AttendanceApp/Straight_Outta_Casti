@@ -15,7 +15,8 @@ class OutViewController: UIViewController, UITextFieldDelegate {
     let thumba = Thumba()
     let geofence: Geofence = Geofence(deadband: Constants.Geolocation.deadband, targetLatitude: Constants.Geolocation.castiLatitude, targetLongitude: Constants.Geolocation.castiLongitude)
     
-    
+    @IBOutlet weak var doneButton: UIButton!
+        
     override func viewDidLoad() {
         doneButton.isHidden = true
         super.viewDidLoad()
@@ -32,6 +33,8 @@ class OutViewController: UIViewController, UITextFieldDelegate {
         if (reason.text != nil && geofence.inCasti) {
             thumba.setupController()
             thumba.updateUI(outViewController: self)
+            reason.text = ""
+            doneButton.isHidden = true
         }
     }
     
@@ -40,33 +43,18 @@ class OutViewController: UIViewController, UITextFieldDelegate {
         return false
     }
     
-    
-    func showNotCastiAlert() {
-        // create the alert
-        let alert = UIAlertController(title: "Sign Out NOT Successful", message: "You are not on campus. If you have left campus without signing out, please email dcampbell@castilleja.org ASAP!", preferredStyle: UIAlertControllerStyle.alert)
-        
-        // add the actions
-        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
-        
-        // show the alert
-        self.present(alert, animated: true, completion: nil)
-    }
-
-    
-    func showSignOutAlert() {
-        // create the alert
-        let alert = UIAlertController(title: "Sign Out Successful", message: "Would you like a reminder to sign in?", preferredStyle: UIAlertControllerStyle.alert)
-        
-        
-        let image = UIImage(named: "Checkmark")
-        var imageView = UIImageView(frame: CGRect(x: 3, y: 3, width: 40, height: 40))
+    func showAlert(title: String, message: String, actions: [UIAlertAction], image: UIImage?) {
+        // set up the alert
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
+        let imageView = UIImageView(frame: CGRect(x: 3, y: 3, width: 40, height: 40))
         imageView.image = image
         
         alert.view.addSubview(imageView)
         
         // add the actions
-        alert.addAction(UIAlertAction(title: "Remind Me", style: UIAlertActionStyle.cancel, handler: {action -> () in self.stateController.wantNotifications = true}))
-        alert.addAction(UIAlertAction(title: "I'll Remember", style: UIAlertActionStyle.default, handler: {action -> () in self.stateController.wantNotifications = true}))
+        for action in actions {
+            alert.addAction(action)
+        }
         
         // show the alert
         self.present(alert, animated: true, completion: nil)
