@@ -20,7 +20,7 @@ class RCValues {
     
     func loadDefaultValues() {
         let appDefaults: [String: NSObject] = [
-            "formURL" : "https://docs.google.com/a/castilleja.org/forms/d/e/1FAIpQLSefSGzX46w4W8K_l3L68GndYLitfGvjA_u4jmVUWFbpIYmskA/formResponse" as NSObject
+            "go" : true as NSObject
         ]
         FIRRemoteConfig.remoteConfig().setDefaults(appDefaults)
     }
@@ -38,7 +38,7 @@ class RCValues {
             
             FIRRemoteConfig.remoteConfig().activateFetched()
             print ("Retrieved values from the cloud!")
-            Constants.GoogleForms.url = FIRRemoteConfig.remoteConfig().configValue(forKey: "formURL").stringValue!
+            Constants.Remote.go = FIRRemoteConfig.remoteConfig().configValue(forKey: "go").boolValue
         }
     }
     
