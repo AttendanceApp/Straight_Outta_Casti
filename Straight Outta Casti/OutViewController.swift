@@ -37,7 +37,7 @@ class OutViewController: UIViewController, UITextFieldDelegate {
             reason.text = ""
             doneButton.isHidden = true
         } else if (reason.text != nil && Constants.Remote.go) {
-            showAlert(title: "Sign Out Not Allowed", message: "You may not sign out if not on campus. Please email Ms. Campbell if you have left campus without signing out.", actions: defaultOkAction, image: nil)
+           showAlert(title: "Sign Out Not Allowed", message: "You may not sign out if not on campus. Please email Ms. Campbell if you have left campus without signing out.", actions: defaultOkAction, image: nil)
         } else if (!Constants.Remote.go) {
             showAlert(title: "Outdated Version", message: "A vital update has been released for this app; you must download the update to sign out.", actions: defaultOkAction, image: nil)
         } else {
