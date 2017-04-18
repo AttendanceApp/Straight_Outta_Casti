@@ -35,6 +35,8 @@ class OutViewController: UIViewController, UITextFieldDelegate {
             thumba.updateUI(outViewController: self)
             reason.text = ""
             doneButton.isHidden = true
+        } else if (reason.text != nil && !geofence.inCasti) {
+            showAlert(title: "Sign Out Not Allowed", message: "You may not sign out if not on campus. Please email Ms. Campbell if you have left campus without signing out.", actions: [UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil)], image: nil)
         }
     }
     
@@ -43,38 +45,23 @@ class OutViewController: UIViewController, UITextFieldDelegate {
         return false
     }
     
-    
-    func showNotCastiAlert() {
-        // create the alert
-        let alert = UIAlertController(title: "Sign Out NOT Successful", message: "You are not on campus. If you have left campus without signing out, please email dcampbell@castilleja.org ASAP!", preferredStyle: UIAlertControllerStyle.alert)
+    func showAlert(title: String, message: String, actions: [UIAlertAction], image: UIImage?) {
+        // set up the alert
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
+        if (image != nil) {
+            let imageView = UIImageView(frame: CGRect(x: 3, y: 3, width: 40, height: 40))
+            imageView.image = image
+            alert.view.addSubview(imageView)
+        }
         
         // add the actions
-        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+        for action in actions {
+            alert.addAction(action)
+        }
         
         // show the alert
         self.present(alert, animated: true, completion: nil)
     }
-
-    
-    func showSignOutAlert() {
-        // create the alert
-        let alert = UIAlertController(title: "Sign Out Successful", message: "Would you like a reminder to sign in?", preferredStyle: UIAlertControllerStyle.alert)
-        
-        
-        let image = UIImage(named: "Checkmark")
-        var imageView = UIImageView(frame: CGRect(x: 3, y: 3, width: 40, height: 40))
-        imageView.image = image
-        
-        alert.view.addSubview(imageView)
-        
-        // add the actions
-        alert.addAction(UIAlertAction(title: "Remind Me", style: UIAlertActionStyle.cancel, handler: nil))
-        alert.addAction(UIAlertAction(title: "I'll Remember", style: UIAlertActionStyle.default, handler: nil))
-        
-        // show the alert
-        self.present(alert, animated: true, completion: nil)
-    }
-
     
     func hideKeyboardWhenTappedAround() {
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
