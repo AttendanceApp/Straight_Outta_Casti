@@ -51,9 +51,8 @@ class OutViewController: UIViewController, UITextFieldDelegate {
         if (image != nil) {
             let imageView = UIImageView(frame: CGRect(x: 3, y: 3, width: 40, height: 40))
             imageView.image = image
+            alert.view.addSubview(imageView)
         }
-        
-        alert.view.addSubview(imageView)
         
         // add the actions
         for action in actions {
