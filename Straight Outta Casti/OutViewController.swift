@@ -35,6 +35,8 @@ class OutViewController: UIViewController, UITextFieldDelegate {
             thumba.updateUI(outViewController: self)
             reason.text = ""
             doneButton.isHidden = true
+        } else if (reason.text != nil && !geofence.inCasti) {
+            showAlert(title: "Sign Out Not Allowed", message: "You may not sign out if not on campus.", actions: [UIAlertAction(title: "I'll Remember", style: UIAlertActionStyle.default, handler: nil)], image: nil)
         }
     }
     
@@ -46,8 +48,10 @@ class OutViewController: UIViewController, UITextFieldDelegate {
     func showAlert(title: String, message: String, actions: [UIAlertAction], image: UIImage?) {
         // set up the alert
         let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
-        let imageView = UIImageView(frame: CGRect(x: 3, y: 3, width: 40, height: 40))
-        imageView.image = image
+        if (image != nil) {
+            let imageView = UIImageView(frame: CGRect(x: 3, y: 3, width: 40, height: 40))
+            imageView.image = image
+        }
         
         alert.view.addSubview(imageView)
         
