@@ -67,7 +67,15 @@ class Thumba {
             let account = outViewController.stateController.get()
             GoogleFormsConnection.doMyBidNiss(firstName: account.firstName, lastName: account.lastName, reason: outViewController.reason.text!)
             //present the alert
-            outViewController.showSignOutAlert()
+            outViewController.showAlert(
+                title: "Sign Out Successful",
+                message: "Would you like a reminder to sign in?",
+                actions: [
+                    UIAlertAction(title: "Remind Me", style: UIAlertActionStyle.cancel, handler: {action -> () in outViewController.stateController.wantNotifications = true}),
+                    UIAlertAction(title: "I'll Remember", style: UIAlertActionStyle.default, handler: {action -> () in outViewController.stateController.wantNotifications = true})
+                ],
+                image: UIImage(named: "Checkmark")
+            )
             self.context?.invalidate()
         })
         
