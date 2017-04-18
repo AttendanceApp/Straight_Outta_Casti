@@ -36,7 +36,7 @@ class OutViewController: UIViewController, UITextFieldDelegate {
             reason.text = ""
             doneButton.isHidden = true
         } else if (reason.text != nil && !geofence.inCasti) {
-            showAlert(title: "Sign Out Not Allowed", message: "You may not sign out if not on campus.", actions: [UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil)], image: nil)
+            showAlert(title: "Sign Out Not Allowed", message: "You may not sign out if not on campus. Please email Ms. Campbell if you have left campus without signing out.", actions: [UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil)], image: nil)
         }
     }
     
