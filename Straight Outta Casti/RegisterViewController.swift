@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RegisterViewController: UIViewController {
+class RegisterViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var firstNameEntry: UITextField!
     @IBOutlet weak var lastNameEntry: UITextField!
@@ -39,6 +39,11 @@ class RegisterViewController: UIViewController {
             let controller = segue.destination as! OutViewController
             controller.stateController = self.stateController
         }
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        dismissKeyboard()
+        return false
     }
     
     func hideKeyboardWhenTappedAround() {

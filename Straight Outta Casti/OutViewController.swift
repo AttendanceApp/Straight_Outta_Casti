@@ -14,6 +14,7 @@ class OutViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var reason: UITextField!
     let thumba = Thumba()
     let geofence: Geofence = Geofence(deadband: Constants.Geolocation.deadband, targetLatitude: Constants.Geolocation.castiLatitude, targetLongitude: Constants.Geolocation.castiLongitude)
+    let defaultOkAction = [UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil)]
     
     @IBOutlet weak var doneButton: UIButton!
         
@@ -30,13 +31,17 @@ class OutViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func done(_ sender: UIButton) {
-        if (reason.text != nil && geofence.inCasti) {
+        if (reason.text != nil && geofence.inCasti && Constants.Remote.go) {
             thumba.setupController()
             thumba.updateUI(outViewController: self)
             reason.text = ""
             doneButton.isHidden = true
-        } else if (reason.text != nil && !geofence.inCasti) {
-            showAlert(title: "Sign Out Not Allowed", message: "You may not sign out if not on campus. Please email Ms. Campbell if you have left campus without signing out.", actions: [UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil)], image: nil)
+        } else if (reason.text != nil && Constants.Remote.go) {
+            showAlert(title: "Sign Out Not Allowed", message: "You may not sign out if not on campus. Please email Ms. Campbell if you have left campus without signing out.", actions: defaultOkAction, image: nil)
+        } else if (!Constants.Remote.go) {
+            showAlert(title: "Outdated Version", message: "A vital update has been released for this app; you must download the update to sign out.", actions: defaultOkAction, image: nil)
+        } else {
+            showAlert(title: "Empty Reason", message: "Please enter a reason to sign out.", actions: defaultOkAction, image: nil)
         }
     }
     
