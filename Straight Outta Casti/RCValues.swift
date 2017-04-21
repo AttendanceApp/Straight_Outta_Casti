@@ -20,7 +20,7 @@ class RCValues {
     
     func loadDefaultValues() {
         let appDefaults: [String: NSObject] = [
-            "go" : true as NSObject
+            "version" : 1.0 as NSObject
         ]
         FIRRemoteConfig.remoteConfig().setDefaults(appDefaults)
     }
@@ -38,7 +38,7 @@ class RCValues {
             
             FIRRemoteConfig.remoteConfig().activateFetched()
             print ("Retrieved values from the cloud!")
-            Constants.Remote.go = FIRRemoteConfig.remoteConfig().configValue(forKey: "go").boolValue
+            Constants.Remote.latestVersion = FIRRemoteConfig.remoteConfig().configValue(forKey: "version").numberValue as! Double
         }
     }
     

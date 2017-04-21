@@ -27,7 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let _ = RCValues.sharedInstance
         //MARK: Starting ViewController
         let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-        if !Constants.Remote.go {
+        if Constants.Remote.latestVersion > Constants.Remote.thisVersion {
             let disabledController = storyboard.instantiateViewController(withIdentifier: "RemoteDisabledViewController") as! RemoteDisabledViewController
             self.window?.makeKeyAndVisible()
             self.window?.rootViewController = disabledController
