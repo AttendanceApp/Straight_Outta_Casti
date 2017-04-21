@@ -16,14 +16,20 @@
 		4717EF5A1E56607600C1144F /* Straight_Outta_CastiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4717EF591E56607600C1144F /* Straight_Outta_CastiTests.swift */; };
 		4717EF651E56607600C1144F /* Straight_Outta_CastiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4717EF641E56607600C1144F /* Straight_Outta_CastiUITests.swift */; };
 		4717EF731E56609300C1144F /* Geofence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4717EF721E56609300C1144F /* Geofence.swift */; };
+		4725E9591E97EA4900935F0D /* RCValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4725E9581E97EA4900935F0D /* RCValues.swift */; };
 		474B53331E8D801000A95F89 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F0F2FD1E6880E50035B907 /* Account.swift */; };
 		47870F6E1E6E10B000AA5375 /* StateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47870F6D1E6E10B000AA5375 /* StateController.swift */; };
 		478796D51E770C59001EC523 /* OutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478796D41E770C59001EC523 /* OutViewController.swift */; };
+		47B68E961EAA589F00E73671 /* RemoteDisabledViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B68E951EAA589F00E73671 /* RemoteDisabledViewController.swift */; };
 		47E2B1581E89661F00BFEFCC /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E2B1571E89661F00BFEFCC /* Notification.swift */; };
 		47F0F3001E6882AB0035B907 /* AccountStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F0F2FF1E6882AB0035B907 /* AccountStorage.swift */; };
 		47F0F3021E6884290035B907 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F0F3011E6884290035B907 /* RegisterViewController.swift */; };
+		47FB95D31E97E61200D50FAD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 47FB95D21E97E61200D50FAD /* GoogleService-Info.plist */; };
+		47FB95D41E97E61200D50FAD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 47FB95D21E97E61200D50FAD /* GoogleService-Info.plist */; };
+		47FB95D51E97E61200D50FAD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 47FB95D21E97E61200D50FAD /* GoogleService-Info.plist */; };
 		47FBB4C41E57AAFA0070C504 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FBB4C31E57AAFA0070C504 /* Constants.swift */; };
 		78C036221E687DA300FD3BE9 /* GoogleFormsConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C036211E687DA300FD3BE9 /* GoogleFormsConnection.swift */; };
+		E86A8D0CB33101AB400A5CBE /* Pods_Straight_Outta_Casti.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F7B6B423C7C17E423E217FE /* Pods_Straight_Outta_Casti.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,8 +50,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		08DE26A24A0252BCC400D518 /* Pods-Straight Outta Casti.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Straight Outta Casti.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Straight Outta Casti/Pods-Straight Outta Casti.debug.xcconfig"; sourceTree = "<group>"; };
 		126939B91E6E10EF00928929 /* Thumba.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Thumba.swift; sourceTree = "<group>"; };
 		126939BB1E6E127200928929 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		1F7B6B423C7C17E423E217FE /* Pods_Straight_Outta_Casti.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Straight_Outta_Casti.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4717EF411E56607600C1144F /* Straight Outta Casti.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Straight Outta Casti.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4717EF441E56607600C1144F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4717EF491E56607600C1144F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -59,14 +67,19 @@
 		4717EF641E56607600C1144F /* Straight_Outta_CastiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Straight_Outta_CastiUITests.swift; sourceTree = "<group>"; };
 		4717EF661E56607600C1144F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4717EF721E56609300C1144F /* Geofence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Geofence.swift; sourceTree = "<group>"; };
+		4725E9581E97EA4900935F0D /* RCValues.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RCValues.swift; sourceTree = "<group>"; };
 		47870F6D1E6E10B000AA5375 /* StateController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StateController.swift; sourceTree = "<group>"; };
 		478796D41E770C59001EC523 /* OutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OutViewController.swift; sourceTree = "<group>"; };
+		47B68E951EAA589F00E73671 /* RemoteDisabledViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteDisabledViewController.swift; sourceTree = "<group>"; };
 		47E2B1571E89661F00BFEFCC /* Notification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 		47F0F2FD1E6880E50035B907 /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		47F0F2FF1E6882AB0035B907 /* AccountStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountStorage.swift; sourceTree = "<group>"; };
 		47F0F3011E6884290035B907 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		47FB95D21E97E61200D50FAD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../GoogleService-Info.plist"; sourceTree = "<group>"; };
+		47FB95D61E97E70F00D50FAD /* Straight Outta Casti.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Straight Outta Casti.entitlements"; sourceTree = "<group>"; };
 		47FBB4C31E57AAFA0070C504 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		78C036211E687DA300FD3BE9 /* GoogleFormsConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleFormsConnection.swift; sourceTree = "<group>"; };
+		B6C4E47B17B2775F65317A82 /* Pods-Straight Outta Casti.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Straight Outta Casti.release.xcconfig"; path = "Pods/Target Support Files/Pods-Straight Outta Casti/Pods-Straight Outta Casti.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E86A8D0CB33101AB400A5CBE /* Pods_Straight_Outta_Casti.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,6 +108,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		20151B639B745206AA1940CA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1F7B6B423C7C17E423E217FE /* Pods_Straight_Outta_Casti.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		236C05B4487B4C2DEA66C2B2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				08DE26A24A0252BCC400D518 /* Pods-Straight Outta Casti.debug.xcconfig */,
+				B6C4E47B17B2775F65317A82 /* Pods-Straight Outta Casti.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		4717EF381E56607600C1144F = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +132,8 @@
 				4717EF581E56607600C1144F /* Straight Outta CastiTests */,
 				4717EF631E56607600C1144F /* Straight Outta CastiUITests */,
 				4717EF421E56607600C1144F /* Products */,
+				236C05B4487B4C2DEA66C2B2 /* Pods */,
+				20151B639B745206AA1940CA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -117,22 +150,26 @@
 		4717EF431E56607600C1144F /* Straight Outta Casti */ = {
 			isa = PBXGroup;
 			children = (
+				47FB95D61E97E70F00D50FAD /* Straight Outta Casti.entitlements */,
 				4717EF441E56607600C1144F /* AppDelegate.swift */,
+				47F0F3011E6884290035B907 /* RegisterViewController.swift */,
+				478796D41E770C59001EC523 /* OutViewController.swift */,
+				47B68E951EAA589F00E73671 /* RemoteDisabledViewController.swift */,
+				47FBB4C31E57AAFA0070C504 /* Constants.swift */,
+				78C036211E687DA300FD3BE9 /* GoogleFormsConnection.swift */,
 				47E2B1571E89661F00BFEFCC /* Notification.swift */,
 				126939B91E6E10EF00928929 /* Thumba.swift */,
 				126939BB1E6E127200928929 /* Utils.swift */,
 				4717EF721E56609300C1144F /* Geofence.swift */,
-				47FBB4C31E57AAFA0070C504 /* Constants.swift */,
-				47F0F3011E6884290035B907 /* RegisterViewController.swift */,
-				478796D41E770C59001EC523 /* OutViewController.swift */,
 				47F0F2FD1E6880E50035B907 /* Account.swift */,
 				47F0F2FF1E6882AB0035B907 /* AccountStorage.swift */,
-				78C036211E687DA300FD3BE9 /* GoogleFormsConnection.swift */,
 				47870F6D1E6E10B000AA5375 /* StateController.swift */,
+				4725E9581E97EA4900935F0D /* RCValues.swift */,
 				4717EF481E56607600C1144F /* Main.storyboard */,
 				4717EF4B1E56607600C1144F /* Assets.xcassets */,
 				4717EF4D1E56607600C1144F /* LaunchScreen.storyboard */,
 				4717EF501E56607600C1144F /* Info.plist */,
+				47FB95D21E97E61200D50FAD /* GoogleService-Info.plist */,
 			);
 			path = "Straight Outta Casti";
 			sourceTree = "<group>";
@@ -162,9 +199,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4717EF691E56607600C1144F /* Build configuration list for PBXNativeTarget "Straight Outta Casti" */;
 			buildPhases = (
+				07B0A32DAB41A324361CA584 /* [CP] Check Pods Manifest.lock */,
 				4717EF3D1E56607600C1144F /* Sources */,
 				4717EF3E1E56607600C1144F /* Frameworks */,
 				4717EF3F1E56607600C1144F /* Resources */,
+				ADE1010950833634D5871536 /* [CP] Embed Pods Frameworks */,
+				C7538815DDA7FA842ABF68AD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -225,6 +265,11 @@
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = UDD5K7FX5V;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 					4717EF541E56607600C1144F = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -266,6 +311,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4717EF4F1E56607600C1144F /* LaunchScreen.storyboard in Resources */,
+				47FB95D31E97E61200D50FAD /* GoogleService-Info.plist in Resources */,
 				4717EF4C1E56607600C1144F /* Assets.xcassets in Resources */,
 				4717EF4A1E56607600C1144F /* Main.storyboard in Resources */,
 			);
@@ -275,6 +321,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47FB95D41E97E61200D50FAD /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,10 +329,59 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47FB95D51E97E61200D50FAD /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		07B0A32DAB41A324361CA584 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		ADE1010950833634D5871536 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Straight Outta Casti/Pods-Straight Outta Casti-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C7538815DDA7FA842ABF68AD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Straight Outta Casti/Pods-Straight Outta Casti-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4717EF3D1E56607600C1144F /* Sources */ = {
@@ -294,11 +390,13 @@
 			files = (
 				474B53331E8D801000A95F89 /* Account.swift in Sources */,
 				4717EF731E56609300C1144F /* Geofence.swift in Sources */,
+				4725E9591E97EA4900935F0D /* RCValues.swift in Sources */,
 				47F0F3021E6884290035B907 /* RegisterViewController.swift in Sources */,
 				478796D51E770C59001EC523 /* OutViewController.swift in Sources */,
 				47F0F3001E6882AB0035B907 /* AccountStorage.swift in Sources */,
 				47870F6E1E6E10B000AA5375 /* StateController.swift in Sources */,
 				47E2B1581E89661F00BFEFCC /* Notification.swift in Sources */,
+				47B68E961EAA589F00E73671 /* RemoteDisabledViewController.swift in Sources */,
 				78C036221E687DA300FD3BE9 /* GoogleFormsConnection.swift in Sources */,
 				126939BA1E6E10EF00928929 /* Thumba.swift in Sources */,
 				126939BC1E6E127200928929 /* Utils.swift in Sources */,
@@ -453,8 +551,10 @@
 		};
 		4717EF6A1E56607600C1144F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 08DE26A24A0252BCC400D518 /* Pods-Straight Outta Casti.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Straight Outta Casti/Straight Outta Casti.entitlements";
 				DEVELOPMENT_TEAM = UDD5K7FX5V;
 				INFOPLIST_FILE = "Straight Outta Casti/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -466,8 +566,10 @@
 		};
 		4717EF6B1E56607600C1144F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B6C4E47B17B2775F65317A82 /* Pods-Straight Outta Casti.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Straight Outta Casti/Straight Outta Casti.entitlements";
 				DEVELOPMENT_TEAM = UDD5K7FX5V;
 				INFOPLIST_FILE = "Straight Outta Casti/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

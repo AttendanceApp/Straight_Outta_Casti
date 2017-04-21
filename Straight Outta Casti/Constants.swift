@@ -30,4 +30,9 @@ class Constants {
         static let options: UNAuthorizationOptions = [.alert, .sound];
         static let content = UNMutableNotificationContent()
     }
+    
+    struct Remote {
+        static let thisVersion = 1.0
+        static var latestVersion = 1.0
+    }
 }

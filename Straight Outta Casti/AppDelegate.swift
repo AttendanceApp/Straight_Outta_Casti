@@ -8,6 +8,7 @@
 
 import UIKit
 import UserNotifications
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -21,10 +22,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let stateController = StateController(accountStorage: AccountStorage())
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        //MARK: Configure Firebase
+        FIRApp.configure()
+        let _ = RCValues.sharedInstance
         //MARK: Starting ViewController
-        // If not on Casti, app doesn't work, if on Casti, register or direct to sign out screen
         let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-        if !stateController.hasUserInfo() {
+        if Constants.Remote.latestVersion > Constants.Remote.thisVersion {
+            let disabledController = storyboard.instantiateViewController(withIdentifier: "RemoteDisabledViewController") as! RemoteDisabledViewController
+            self.window?.makeKeyAndVisible()
+            self.window?.rootViewController = disabledController
+        } else if !stateController.hasUserInfo() {
             let registerController = storyboard.instantiateViewController(withIdentifier: "RegisterViewController") as! RegisterViewController
             registerController.stateController = self.stateController
             self.window?.makeKeyAndVisible()
