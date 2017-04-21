@@ -20,7 +20,7 @@ class GoogleFormsConnection {
         let session = URLSession(configuration: URLSessionConfiguration.default)
         
         request.httpMethod = "POST"
-        let fieldsToPost = Constants.GoogleForms.firstNameEntry + firstName + Constants.GoogleForms.lastNameEntry + lastName + Constants.GoogleForms.reasonEntry + reason as NSString
+        let fieldsToPost = Constants.GoogleForms.firstNameEntry + firstName + Constants.GoogleForms.lastNameEntry + lastName + Constants.GoogleForms.inoroutEntry + "Out" + Constants.GoogleForms.reasonEntry + reason + Constants.GoogleForms.usernameEntry + "StraightOuttaCasti" as NSString
         
         request.setValue("application/x-www-form-urlencoded; charset=utf-8", forHTTPHeaderField: "Content-Type")
         
