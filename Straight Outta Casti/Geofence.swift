@@ -21,7 +21,7 @@ class Geofence: NSObject, CLLocationManagerDelegate {
         self.deadband = deadband
         self.targetLatitude = targetLatitude
         self.targetLongitude = targetLongitude
-        self.region = CLCircularRegion(center: CLLocationCoordinate2D(latitude: targetLatitude, longitude: targetLongitude), radius: deadband, identifier: "circle")
+        self.region = CLCircularRegion(center: CLLocationCoordinate2D(latitude: targetLatitude, longitude: targetLongitude), radius: 50, identifier: "circle")
         super.init()
         self.locationManager.requestAlwaysAuthorization()
         if (CLLocationManager.locationServicesEnabled()) {
@@ -46,6 +46,16 @@ class Geofence: NSObject, CLLocationManagerDelegate {
         inCasti = ((abs(currentLatitude - targetLatitude) <= deadband) && (abs(currentLongitude - targetLongitude) <= deadband))
         print (currentLatitude - targetLatitude)
         print (currentLongitude - targetLongitude)
+        print (region.contains(locations[locations.count-1].coordinate))
         print (inCasti)
     }
+    
+    func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
+        print ("entered region")
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didExitRegion region: CLRegion) {
+        print ("exited region")
+    }
+
 }
