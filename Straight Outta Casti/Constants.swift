@@ -10,8 +10,8 @@ import Foundation
 
 class Constants {
     struct Geolocation {
-        static let castiLatitude: Double = 37.438696
-        static let castiLongitude: Double = -122.152208
+        static let castiLatitude: Double = 37.438697
+        static let castiLongitude: Double = -122.151572
         static let latitudeDeadband: Double = 0.005
         static let longitudeDeadband: Double = 0.005
     }
