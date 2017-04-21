@@ -31,15 +31,13 @@ class OutViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func done(_ sender: UIButton) {
-        if (reason.text != nil && geofence.inCasti && Constants.Remote.go) {
+        if (reason.text != nil && geofence.inCasti) {
             thumba.setupController()
             thumba.updateUI(outViewController: self)
             reason.text = ""
             doneButton.isHidden = true
-        } else if (reason.text != nil && Constants.Remote.go) {
+        } else if (!geofence.inCasti) {
            showAlert(title: "Sign Out Not Allowed", message: "You may not sign out if not on campus. Please email Ms. Campbell if you have left campus without signing out.", actions: defaultOkAction, image: nil)
-        } else if (!Constants.Remote.go) {
-            showAlert(title: "Outdated Version", message: "A vital update has been released for this app; you must download the update to sign out.", actions: defaultOkAction, image: nil)
         } else {
             showAlert(title: "Empty Reason", message: "Please enter a reason to sign out.", actions: defaultOkAction, image: nil)
         }

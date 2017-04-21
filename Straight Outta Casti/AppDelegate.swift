@@ -26,9 +26,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FIRApp.configure()
         let _ = RCValues.sharedInstance
         //MARK: Starting ViewController
-        // If not on Casti, app doesn't work, if on Casti, register or direct to sign out screen
         let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-        if !stateController.hasUserInfo() {
+        if !Constants.Remote.go {
+            let disabledController = storyboard.instantiateViewController(withIdentifier: "RemoteDisabledViewController") as! RemoteDisabledViewController
+            self.window?.makeKeyAndVisible()
+            self.window?.rootViewController = disabledController
+        } else if !stateController.hasUserInfo() {
             let registerController = storyboard.instantiateViewController(withIdentifier: "RegisterViewController") as! RegisterViewController
             registerController.stateController = self.stateController
             self.window?.makeKeyAndVisible()
