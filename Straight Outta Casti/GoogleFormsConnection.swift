@@ -23,8 +23,8 @@ class GoogleFormsConnection {
         let namesString = Constants.GoogleForms.firstNameEntry + firstName + Constants.GoogleForms.lastNameEntry + lastName
         let outString = Constants.GoogleForms.inoroutEntry + "Out"
         let reasonString = Constants.GoogleForms.reasonEntry + reason + Constants.GoogleForms.usernameEntry + "StraightOuttaCasti"
-        print (reason)
-        print (reasonString)
+        print ("REASON: " + reason)
+        print ("REASONSTRING: " + reasonString)
         let fieldsToPost = namesString + outString + reasonString as NSString
         
         request.setValue("application/x-www-form-urlencoded; charset=utf-8", forHTTPHeaderField: "Content-Type")

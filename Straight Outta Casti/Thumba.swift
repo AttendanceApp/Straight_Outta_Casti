@@ -76,6 +76,7 @@ class Thumba {
                 ],
                 image: UIImage(named: "Checkmark")
             )
+            outViewController.reason.text = ""
             self.context?.invalidate()
         })
         
