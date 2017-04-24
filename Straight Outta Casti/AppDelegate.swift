@@ -15,9 +15,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     //MARK: Variables
     var window: UIWindow?
-    var notification: Notification?
-    
-    let geofence: Geofence = Geofence(deadband: Constants.Geolocation.deadband, targetLatitude: Constants.Geolocation.castiLatitude, targetLongitude: Constants.Geolocation.castiLongitude)
     
     let stateController = StateController(accountStorage: AccountStorage())
 
@@ -42,11 +39,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             self.window?.makeKeyAndVisible()
             self.window?.rootViewController = signOutController
         }
-        
-        //MARK: Set up notification
-        notification = Notification(stateController: stateController)
-        notification?.requestAuth()
-        notification?.getSettings()
 
         return true
     }
@@ -54,10 +46,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
-        
-        let trigger = UNLocationNotificationTrigger(region: geofence.region, repeats: false)
-//        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 10, repeats: false)
-        notification?.setNotification(trigger: trigger)
     }
 
     func applicationDidEnterBackground(_ application: UIApplication) {
