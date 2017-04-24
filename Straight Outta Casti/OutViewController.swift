@@ -74,6 +74,8 @@ class OutViewController: UIViewController, UITextFieldDelegate {
         view.endEditing(true)
         if reason != nil {
             doneButton.isHidden = false
+        } else {
+            doneButton.isHidden = true
         }
     }
     

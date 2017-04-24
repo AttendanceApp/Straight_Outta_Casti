@@ -44,10 +44,21 @@ class Geofence: NSObject, CLLocationManagerDelegate {
         let currentLatitude = locations[locations.count-1].coordinate.latitude
         let currentLongitude = locations[locations.count-1].coordinate.longitude
         inCasti = ((abs(currentLatitude - targetLatitude) <= deadband) && (abs(currentLongitude - targetLongitude) <= deadband))
-        print (currentLatitude - targetLatitude)
-        print (currentLongitude - targetLongitude)
-        print (region.contains(locations[locations.count-1].coordinate))
-        print (inCasti)
+        if !inCasti {
+            if (abs(currentLongitude - targetLongitude) <= deadband) {
+                print ("Latitude off by:", abs(currentLatitude - targetLatitude))
+            } else if (abs(currentLatitude - targetLatitude) <= deadband) {
+                print ("Longitude off by:", abs(currentLongitude - targetLongitude))
+            } else {
+                print ("Latitude off by:", abs(currentLatitude - targetLatitude))
+                print ("Longitude off by:", abs(currentLongitude - targetLongitude))
+            }
+        }
+        print ("Latitude:", currentLatitude)
+        print ("Longitude:", currentLongitude)
+        print ("Region Contains:", region.contains(locations[locations.count-1].coordinate))
+        print ("inCasti:", inCasti)
+        print ()
     }
     
     func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
