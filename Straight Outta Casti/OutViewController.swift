@@ -10,8 +10,11 @@ import UIKit
 
 class OutViewController: UIViewController, UITextFieldDelegate {
     
+    //MARK: Setup and Variables
     var stateController: StateController!
     @IBOutlet weak var reason: UITextField!
+    @IBOutlet weak var inOutLabel: UILabel!
+    let inOutList: [String] = ["Sign In", "Sign Out"]
     let thumba = Thumba()
     let geofence: Geofence = Geofence(deadband: Constants.Geolocation.deadband, targetLatitude: Constants.Geolocation.castiLatitude, targetLongitude: Constants.Geolocation.castiLongitude)
     let defaultOkAction = [UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil)]
@@ -30,6 +33,7 @@ class OutViewController: UIViewController, UITextFieldDelegate {
         // Dispose of any resources that can be recreated.
     }
     
+    //MARK: IBActions
     @IBAction func done(_ sender: UIButton) {
         if (reason.text != nil && geofence.inCasti) {
             thumba.setupController()
@@ -42,9 +46,8 @@ class OutViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        dismissKeyboard()
-        return false
+    @IBAction func inOutSelected(_ sender: UISegmentedControl) {
+        inOutLabel.text = inOutList[sender.selectedSegmentIndex]
     }
     
     func showAlert(title: String, message: String, actions: [UIAlertAction], image: UIImage?) {
@@ -65,6 +68,7 @@ class OutViewController: UIViewController, UITextFieldDelegate {
         self.present(alert, animated: true, completion: nil)
     }
     
+    //MARK: Keyboard Handling
     func hideKeyboardWhenTappedAround() {
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         view.addGestureRecognizer(tap)
@@ -77,6 +81,11 @@ class OutViewController: UIViewController, UITextFieldDelegate {
         } else {
             doneButton.isHidden = true
         }
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        dismissKeyboard()
+        return false
     }
     
     /*

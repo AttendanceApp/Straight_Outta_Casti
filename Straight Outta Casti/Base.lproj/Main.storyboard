@@ -133,6 +133,10 @@
                                     <segment title="In"/>
                                     <segment title="Out"/>
                                 </segments>
+                                <connections>
+                                    <action selector="inOutControl:" destination="jKp-st-cq4" eventType="valueChanged" id="N8t-wn-Ozb"/>
+                                    <action selector="inOutSelected:" destination="jKp-st-cq4" eventType="valueChanged" id="uZM-y7-Sjd"/>
+                                </connections>
                             </segmentedControl>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ith-kK-9zc">
                                 <rect key="frame" x="93" y="283" width="189" height="130"/>
@@ -168,6 +172,7 @@
                     </view>
                     <connections>
                         <outlet property="doneButton" destination="4B4-Bv-pSH" id="bSd-9e-z65"/>
+                        <outlet property="inOutLabel" destination="KqQ-dX-6TU" id="DG2-TE-KpK"/>
                         <outlet property="reason" destination="ith-kK-9zc" id="YjM-ff-Wgu"/>
                     </connections>
                 </viewController>
