@@ -47,7 +47,7 @@ class OutViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func inOutSelected(_ sender: UISegmentedControl) {
-        inOutLabel.text = inOutList[sender.selectedSegmentIndex]
+        //print("Index", sender.selectedSegmentIndex)
     }
     
     func showAlert(title: String, message: String, actions: [UIAlertAction], image: UIImage?) {

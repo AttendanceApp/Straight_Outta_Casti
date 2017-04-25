@@ -69,10 +69,9 @@ class Thumba {
             //present the alert
             outViewController.showAlert(
                 title: "Sign Out Successful",
-                message: "Would you like a reminder to sign in?",
+                message: "You are free to leave campus.",
                 actions: [
-                    UIAlertAction(title: "Remind Me", style: UIAlertActionStyle.cancel, handler: {action -> () in outViewController.stateController.wantNotifications = true}),
-                    UIAlertAction(title: "I'll Remember", style: UIAlertActionStyle.default, handler: {action -> () in outViewController.stateController.wantNotifications = true})
+                    UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil)
                 ],
                 image: UIImage(named: "Checkmark")
             )
