@@ -13,8 +13,6 @@ class OutViewController: UIViewController, UITextFieldDelegate {
     //MARK: Setup and Variables
     var stateController: StateController!
     @IBOutlet weak var reason: UITextField!
-    @IBOutlet weak var inOutLabel: UILabel!
-    let inOutList: [String] = ["Sign In", "Sign Out"]
     let thumba = Thumba()
     let geofence: Geofence = Geofence(deadband: Constants.Geolocation.deadband, targetLatitude: Constants.Geolocation.castiLatitude, targetLongitude: Constants.Geolocation.castiLongitude)
     let defaultOkAction = [UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil)]
@@ -46,9 +44,6 @@ class OutViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
-    @IBAction func inOutSelected(_ sender: UISegmentedControl) {
-        //print("Index", sender.selectedSegmentIndex)
-    }
     
     func showAlert(title: String, message: String, actions: [UIAlertAction], image: UIImage?) {
         // set up the alert

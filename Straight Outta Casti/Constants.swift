@@ -27,12 +27,6 @@ class Constants {
         static let url: String = "https://docs.google.com/a/castilleja.org/forms/d/e/1FAIpQLSf3eqWNn3VcSl2agC3d1A2oP_GZ7lFyglIL6_0qjk3Ia30rPA/formResponse"
     }
     
-    struct Notifications {
-        static let center: UNUserNotificationCenter = UNUserNotificationCenter.current()
-        static let options: UNAuthorizationOptions = [.alert, .sound];
-        static let content = UNMutableNotificationContent()
-    }
-    
     struct Remote {
         static let thisVersion = 1.0
         static var latestVersion = 1.0

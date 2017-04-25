@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -124,20 +124,6 @@
                                     <action selector="done:" destination="jKp-st-cq4" eventType="touchUpInside" id="6PR-cq-96K"/>
                                 </connections>
                             </button>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="GcK-W2-deW">
-                                <rect key="frame" x="114" y="190" width="146" height="29"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="146" id="XVT-BM-LmM"/>
-                                </constraints>
-                                <segments>
-                                    <segment title="In"/>
-                                    <segment title="Out"/>
-                                </segments>
-                                <connections>
-                                    <action selector="inOutControl:" destination="jKp-st-cq4" eventType="valueChanged" id="N8t-wn-Ozb"/>
-                                    <action selector="inOutSelected:" destination="jKp-st-cq4" eventType="valueChanged" id="uZM-y7-Sjd"/>
-                                </connections>
-                            </segmentedControl>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ith-kK-9zc">
                                 <rect key="frame" x="93" y="283" width="189" height="130"/>
                                 <constraints>
@@ -158,7 +144,6 @@
                         <constraints>
                             <constraint firstItem="ith-kK-9zc" firstAttribute="width" secondItem="KqQ-dX-6TU" secondAttribute="width" id="1jQ-tX-SZR"/>
                             <constraint firstItem="YWJ-zE-O0d" firstAttribute="top" secondItem="KqQ-dX-6TU" secondAttribute="bottom" constant="87" id="6iR-JY-BKU"/>
-                            <constraint firstItem="GcK-W2-deW" firstAttribute="centerX" secondItem="WNP-gw-WGZ" secondAttribute="centerX" id="6w5-Rv-rk3"/>
                             <constraint firstItem="YWJ-zE-O0d" firstAttribute="leading" secondItem="ith-kK-9zc" secondAttribute="leading" id="90k-Gf-Wa0"/>
                             <constraint firstItem="4B4-Bv-pSH" firstAttribute="top" secondItem="ith-kK-9zc" secondAttribute="bottom" constant="109" id="VOJ-nj-2A2"/>
                             <constraint firstItem="KqQ-dX-6TU" firstAttribute="centerX" secondItem="WNP-gw-WGZ" secondAttribute="centerX" id="Vpp-im-Rce"/>
@@ -167,7 +152,6 @@
                             <constraint firstItem="KqQ-dX-6TU" firstAttribute="top" secondItem="YIe-Ov-XEL" secondAttribute="bottom" constant="93" id="hth-Ee-MF8"/>
                             <constraint firstItem="KqQ-dX-6TU" firstAttribute="top" secondItem="YIe-Ov-XEL" secondAttribute="bottom" constant="93" id="i2k-Re-FE7"/>
                             <constraint firstItem="ith-kK-9zc" firstAttribute="top" secondItem="YWJ-zE-O0d" secondAttribute="bottom" constant="8" id="m6c-0m-tkO"/>
-                            <constraint firstItem="YWJ-zE-O0d" firstAttribute="top" secondItem="GcK-W2-deW" secondAttribute="bottom" constant="36" id="wQA-EF-tLh"/>
                         </constraints>
                     </view>
                     <connections>
