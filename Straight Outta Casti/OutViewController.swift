@@ -14,7 +14,7 @@ class OutViewController: UIViewController, UITextFieldDelegate {
     var stateController: StateController!
     @IBOutlet weak var reason: UITextField!
     @IBOutlet weak var inOutLabel: UILabel!
-    let inOutList: [String] = ["Sign In", "Sign Out"]
+    let inOutList: [String] = ["In", "Out"]
     let thumba = Thumba()
     let geofence: Geofence = Geofence(deadband: Constants.Geolocation.deadband, targetLatitude: Constants.Geolocation.castiLatitude, targetLongitude: Constants.Geolocation.castiLongitude)
     let defaultOkAction = [UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil)]
@@ -47,7 +47,8 @@ class OutViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func inOutSelected(_ sender: UISegmentedControl) {
-        inOutLabel.text = inOutList[sender.selectedSegmentIndex]
+        inOutLabel.text = "Sign " + inOutList[sender.selectedSegmentIndex]
+        Constants.GoogleForms.inOrOut = inOutList[sender.selectedSegmentIndex]
     }
     
     
@@ -77,7 +78,7 @@ class OutViewController: UIViewController, UITextFieldDelegate {
     
     func dismissKeyboard() {
         view.endEditing(true)
-        if reason.text == nil {
+        if reason.text != "" {
             doneButton.isHidden = false
         } else {
             doneButton.isHidden = true

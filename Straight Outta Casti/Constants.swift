@@ -25,6 +25,7 @@ class Constants {
         static let reasonEntry: String = "&entry.480295091="
         static let usernameEntry: String = "&entry.2039457445="
         static let url: String = "https://docs.google.com/a/castilleja.org/forms/d/e/1FAIpQLSf3eqWNn3VcSl2agC3d1A2oP_GZ7lFyglIL6_0qjk3Ia30rPA/formResponse"
+        static var inOrOut: String = "Out"
     }
     
     struct Notifications {

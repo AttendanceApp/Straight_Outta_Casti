@@ -12,7 +12,7 @@ import LocalAuthentication
 
 class Thumba {
     
-    let kMsgShowReason = "Sign Out"
+    let kMsgShowReason = "Verify your identity with your fingerprint."
     
     var context: LAContext?
     
@@ -66,16 +66,20 @@ class Thumba {
             }
             let account = outViewController.stateController.get()
             GoogleFormsConnection.doMyBidNiss(firstName: account.firstName, lastName: account.lastName, reason: outViewController.reason.text!)
+            outViewController.reason.text = ""
+            var message = "You are free to leave campus."
+            if Constants.GoogleForms.inOrOut == "In" {
+                message = "Welcome back to campus."
+            }
             //present the alert
             outViewController.showAlert(
-                title: "Sign Out Successful",
-                message: "You are free to leave campus.",
+                title: "Sign " + Constants.GoogleForms.inOrOut + " Successful",
+                message: message,
                 actions: [
                     UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil)
                 ],
                 image: UIImage(named: "Checkmark")
             )
-            outViewController.reason.text = ""
             self.context?.invalidate()
         })
         
