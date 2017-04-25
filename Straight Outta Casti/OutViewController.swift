@@ -47,8 +47,9 @@ class OutViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func inOutSelected(_ sender: UISegmentedControl) {
-        //print("Index", sender.selectedSegmentIndex)
+        inOutLabel.text = inOutList[sender.selectedSegmentIndex]
     }
+    
     
     func showAlert(title: String, message: String, actions: [UIAlertAction], image: UIImage?) {
         // set up the alert
@@ -76,7 +77,7 @@ class OutViewController: UIViewController, UITextFieldDelegate {
     
     func dismissKeyboard() {
         view.endEditing(true)
-        if reason != nil {
+        if reason.text == nil {
             doneButton.isHidden = false
         } else {
             doneButton.isHidden = true
