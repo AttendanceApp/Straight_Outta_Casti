@@ -110,6 +110,9 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign Out" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KqQ-dX-6TU">
                                 <rect key="frame" x="93" y="113" width="189" height="54"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="189" id="lWT-fS-kua"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="45"/>
                                 <color key="textColor" red="0.23137254901960785" green="0.25098039215686274" blue="0.27058823529411763" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -134,8 +137,7 @@
                                     <segment title="Out"/>
                                 </segments>
                                 <connections>
-                                    <action selector="inOutControl:" destination="jKp-st-cq4" eventType="valueChanged" id="N8t-wn-Ozb"/>
-                                    <action selector="inOutSelected:" destination="jKp-st-cq4" eventType="valueChanged" id="uZM-y7-Sjd"/>
+                                    <action selector="inOutSelected:" destination="jKp-st-cq4" eventType="valueChanged" id="vTy-nE-Z0p"/>
                                 </connections>
                             </segmentedControl>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ith-kK-9zc">
