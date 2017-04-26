@@ -21,7 +21,7 @@ class GoogleFormsConnection {
         
         request.httpMethod = "POST"
         let namesString = Constants.GoogleForms.firstNameEntry + firstName + Constants.GoogleForms.lastNameEntry + lastName
-        let outString = Constants.GoogleForms.inoroutEntry + "Out"
+        let outString = Constants.GoogleForms.inoroutEntry + Constants.GoogleForms.inOrOut
         let reasonString = Constants.GoogleForms.reasonEntry + reason + Constants.GoogleForms.usernameEntry + "StraightOuttaCasti"
         print ("REASON: " + reason)
         print ("REASONSTRING: " + reasonString)
