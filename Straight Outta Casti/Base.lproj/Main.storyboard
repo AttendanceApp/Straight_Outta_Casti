@@ -136,6 +136,7 @@
                                     <segment title="In"/>
                                     <segment title="Out"/>
                                 </segments>
+                                <color key="tintColor" red="0.47343042492866516" green="0.538688063621521" blue="0.76870477199554443" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <action selector="inOutSelected:" destination="jKp-st-cq4" eventType="valueChanged" id="vTy-nE-Z0p"/>
                                 </connections>
