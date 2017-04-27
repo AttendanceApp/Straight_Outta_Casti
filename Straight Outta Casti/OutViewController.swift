@@ -71,7 +71,7 @@ class OutViewController: UIViewController, UITextFieldDelegate {
     
     func dismissKeyboard() {
         view.endEditing(true)
-        if reason != nil {
+        if reason.text != "" {
             doneButton.isHidden = false
         } else {
             doneButton.isHidden = true
