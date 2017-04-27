@@ -258,7 +258,7 @@
 				TargetAttributes = {
 					4717EF401E56607600C1144F = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = UDD5K7FX5V;
+						DevelopmentTeam = 2AFHX9XP72;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Keychain = {
@@ -547,10 +547,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Straight Outta Casti/Straight Outta Casti.entitlements";
-				DEVELOPMENT_TEAM = UDD5K7FX5V;
+				DEVELOPMENT_TEAM = 2AFHX9XP72;
 				INFOPLIST_FILE = "Straight Outta Casti/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "attendance.Straight-Outta-Casti";
+				PRODUCT_BUNDLE_IDENTIFIER = "attendance.Straight-Outta-Casti.kenzie";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -562,10 +562,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Straight Outta Casti/Straight Outta Casti.entitlements";
-				DEVELOPMENT_TEAM = UDD5K7FX5V;
+				DEVELOPMENT_TEAM = 2AFHX9XP72;
 				INFOPLIST_FILE = "Straight Outta Casti/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "attendance.Straight-Outta-Casti";
+				PRODUCT_BUNDLE_IDENTIFIER = "attendance.Straight-Outta-Casti.kenzie";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
