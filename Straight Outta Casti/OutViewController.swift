@@ -33,7 +33,7 @@ class OutViewController: UIViewController, UITextFieldDelegate {
     
     //MARK: IBActions
     @IBAction func done(_ sender: UIButton) {
-        if (reason.text != nil && geofence.inCasti) {
+        if (reason.text != "" && geofence.inCasti) {
             thumba.setupController()
             thumba.updateUI(outViewController: self)
             doneButton.isHidden = true
