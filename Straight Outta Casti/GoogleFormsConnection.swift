@@ -12,7 +12,7 @@ import UIKit
 class GoogleFormsConnection {
     
     
-    static func doMyBidNiss(firstName: String, lastName: String, reason: String) {
+    static func doMyBidNiss(firstName: String, lastName: String, reason: String, location: String) {
         let myUrl = NSURL(string: Constants.GoogleForms.url)
         
         var request = URLRequest(url:myUrl! as URL)
