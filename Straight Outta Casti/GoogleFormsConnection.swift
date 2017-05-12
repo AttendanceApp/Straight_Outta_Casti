@@ -22,7 +22,7 @@ class GoogleFormsConnection {
         request.httpMethod = "POST"
         let namesString = Constants.GoogleForms.firstNameEntry + firstName + Constants.GoogleForms.lastNameEntry + lastName
         let outString = Constants.GoogleForms.inoroutEntry + Constants.GoogleForms.inOrOut
-        let reasonString = Constants.GoogleForms.reasonEntry + reason + Constants.GoogleForms.usernameEntry + "StraightOuttaCasti"
+        let reasonString = Constants.GoogleForms.reasonEntry + reason
         print ("REASON: " + reason)
         print ("REASONSTRING: " + reasonString)
         let fieldsToPost = namesString + outString + reasonString as NSString
