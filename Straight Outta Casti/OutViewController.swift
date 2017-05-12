@@ -16,12 +16,15 @@ class OutViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var inOutLabel: UILabel!
     let inOutList: [String] = ["In", "Out"]
     let thumba = Thumba()
-    let geofence: Geofence = Geofence(deadband: Constants.Geolocation.deadband, targetLatitude: Constants.Geolocation.castiLatitude, targetLongitude: Constants.Geolocation.castiLongitude)
+    var geofence: Geofence!
     let defaultOkAction = [UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil)]
     
     @IBOutlet weak var doneButton: UIButton!
         
     override func viewDidLoad() {
+        if geofence == nil {
+            geofence = Geofence(deadband: Constants.Geolocation.deadband, targetLatitude: Constants.Geolocation.castiLatitude, targetLongitude: Constants.Geolocation.castiLongitude)
+        }
         doneButton.isHidden = true
         super.viewDidLoad()
         hideKeyboardWhenTappedAround()

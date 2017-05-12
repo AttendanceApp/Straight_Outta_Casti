@@ -12,27 +12,29 @@ import UIKit
 class GoogleFormsConnection {
     
     
-    static func doMyBidNiss(firstName: String, lastName: String, reason: String, location: String, teacher: Bool) {
+    static func doMyBidNiss(firstName: String, lastName: String, reason: String, teacher: Bool) {
         
         var myURL: NSURL!
         var namesString: String!
         var outString: String!
         var reasonString: String!
         var fieldsToPost: NSString!
+        var locationString: String!
         let session = URLSession(configuration: URLSessionConfiguration.default)
         if teacher {
             myURL = NSURL(string: Constants.GoogleForms.urlT)
             namesString = Constants.GoogleForms.firstNameEntryT + firstName + Constants.GoogleForms.lastNameEntryT + lastName
             outString = Constants.GoogleForms.inoroutEntryT + Constants.GoogleForms.inOrOut
-            fieldsToPost = namesString! + outString! as NSString
+            locationString =  Constants.GoogleForms.locationEntryT + "Straight Outta Casti"
+            fieldsToPost = namesString! + outString! + locationString! as NSString
         } else {
             myURL = NSURL(string: Constants.GoogleForms.urlS)
             namesString = Constants.GoogleForms.firstNameEntryS + firstName + Constants.GoogleForms.lastNameEntryS + lastName
             outString = Constants.GoogleForms.inoroutEntryS + Constants.GoogleForms.inOrOut
             reasonString = Constants.GoogleForms.reasonEntryS + reason
-            fieldsToPost = namesString! + outString! + reasonString! as NSString
+            locationString =  Constants.GoogleForms.locationEntryS + "Straight Outta Casti"
+            fieldsToPost = namesString! + outString! + reasonString! + locationString! as NSString
         }
-        
         var request = URLRequest(url:myURL! as URL)
         request.httpMethod = "POST"
         

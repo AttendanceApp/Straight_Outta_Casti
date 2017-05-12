@@ -27,12 +27,16 @@ class Geofence: NSObject, CLLocationManagerDelegate {
             locationManager.startUpdatingLocation()
             locationManager.desiredAccuracy = kCLLocationAccuracyBest
             locationManager.allowsBackgroundLocationUpdates = true
-        }    }
+        }
+    }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let currentLatitude = locations[locations.count-1].coordinate.latitude
         let currentLongitude = locations[locations.count-1].coordinate.longitude
-        inCasti = ((abs(currentLatitude - targetLatitude) <= deadband) && (abs(currentLongitude - targetLongitude) <= deadband))
+        print ("Latitude:", abs(currentLatitude - targetLatitude))
+        print ("Longitude:", abs(currentLongitude - targetLongitude))
+        print ()
+        inCasti = ((abs(currentLatitude - targetLatitude) <= deadband) && (abs(currentLongitude - targetLongitude-0.001) <= deadband))
     }
     
 }
