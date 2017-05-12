@@ -65,11 +65,7 @@ class Thumba {
                 return
             }
             let account = outViewController.stateController.get()
-            if account.teacher {
-                //do the teacher google form
-            } else {
-                GoogleFormsConnection.doMyBidNiss(firstName: account.firstName, lastName: account.lastName, reason: outViewController.reason.text!, location: "Straight Outta Casti")
-            }
+            GoogleFormsConnection.doMyBidNiss(firstName: account.firstName, lastName: account.lastName, reason: outViewController.reason.text!, location: "Straight Outta Casti", teacher: account.teacher)
             outViewController.reason.text = ""
             var message = "You are free to leave campus."
             if Constants.GoogleForms.inOrOut == "In" {

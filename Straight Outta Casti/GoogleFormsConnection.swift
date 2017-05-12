@@ -12,20 +12,29 @@ import UIKit
 class GoogleFormsConnection {
     
     
-    static func doMyBidNiss(firstName: String, lastName: String, reason: String, location: String) {
-        let myUrl = NSURL(string: Constants.GoogleForms.url)
+    static func doMyBidNiss(firstName: String, lastName: String, reason: String, location: String, teacher: Bool) {
         
-        var request = URLRequest(url:myUrl! as URL)
-        //NSMutableURLRequest(url: url! as URL)
+        var myURL: NSURL!
+        var namesString: String!
+        var outString: String!
+        var reasonString: String!
+        var fieldsToPost: NSString!
         let session = URLSession(configuration: URLSessionConfiguration.default)
+        if teacher {
+            myURL = NSURL(string: Constants.GoogleForms.urlT)
+            namesString = Constants.GoogleForms.firstNameEntryT + firstName + Constants.GoogleForms.lastNameEntryT + lastName
+            outString = Constants.GoogleForms.inoroutEntryT + Constants.GoogleForms.inOrOut
+            fieldsToPost = namesString! + outString! as NSString
+        } else {
+            myURL = NSURL(string: Constants.GoogleForms.urlS)
+            namesString = Constants.GoogleForms.firstNameEntryS + firstName + Constants.GoogleForms.lastNameEntryS + lastName
+            outString = Constants.GoogleForms.inoroutEntryS + Constants.GoogleForms.inOrOut
+            reasonString = Constants.GoogleForms.reasonEntryS + reason
+            fieldsToPost = namesString! + outString! + reasonString! as NSString
+        }
         
+        var request = URLRequest(url:myURL! as URL)
         request.httpMethod = "POST"
-        let namesString = Constants.GoogleForms.firstNameEntry + firstName + Constants.GoogleForms.lastNameEntry + lastName
-        let outString = Constants.GoogleForms.inoroutEntry + Constants.GoogleForms.inOrOut
-        let reasonString = Constants.GoogleForms.reasonEntry + reason
-        print ("REASON: " + reason)
-        print ("REASONSTRING: " + reasonString)
-        let fieldsToPost = namesString + outString + reasonString as NSString
         
         request.setValue("application/x-www-form-urlencoded; charset=utf-8", forHTTPHeaderField: "Content-Type")
         
@@ -37,7 +46,7 @@ class GoogleFormsConnection {
             print(strData)
             print(error)
             print(response)
-            print(myUrl)
+            print(myURL)
         }
         task.resume()
     }
