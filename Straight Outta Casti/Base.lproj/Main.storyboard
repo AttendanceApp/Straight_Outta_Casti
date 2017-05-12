@@ -98,6 +98,7 @@
                     <connections>
                         <outlet property="firstNameEntry" destination="uEH-SD-Sqf" id="2MU-DA-03f"/>
                         <outlet property="lastNameEntry" destination="EsQ-32-chV" id="kVn-V2-SbL"/>
+                        <outlet property="teacherSelect" destination="fUa-id-hf4" id="kQg-zw-FXd"/>
                         <segue destination="jKp-st-cq4" kind="presentation" identifier="submitRegistration" id="Nbk-rd-sim"/>
                     </connections>
                 </viewController>

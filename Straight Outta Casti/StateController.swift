@@ -27,7 +27,7 @@ class StateController {
         if accountStorage.fetchAccounts().count > 0 {
             return accountStorage.fetchAccounts()[0]
         } else {
-            return Account(firstName: "No", lastName: "Account")
+            return Account(firstName: "No", lastName: "Account", teacher: false)
         }
     }
     

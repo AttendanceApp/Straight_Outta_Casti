@@ -18,7 +18,6 @@ class Constants {
     
     struct GoogleForms {
         //add your strings for Google Forms here so that they're easy to access and change centrally
-        //For example:
         static let firstNameEntry: String = "entry.969444259="
         static let lastNameEntry: String = "&entry.30603988="
         static let inoroutEntry: String = "&entry.1033565684="

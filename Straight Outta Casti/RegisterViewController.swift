@@ -10,6 +10,7 @@ import UIKit
 
 class RegisterViewController: UIViewController, UITextFieldDelegate {
 
+    @IBOutlet weak var teacherSelect: UISegmentedControl!
     @IBOutlet weak var firstNameEntry: UITextField!
     @IBOutlet weak var lastNameEntry: UITextField!
     var stateController: StateController!
@@ -26,7 +27,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func submitPressed(_ sender: UIButton) {
-        let account = Account(firstName: firstNameEntry.text!, lastName: lastNameEntry.text!)
+        let account = Account(firstName: firstNameEntry.text!, lastName: lastNameEntry.text!, teacher: teacherSelect.selectedSegmentIndex == 0)
         stateController.set(account)
         self.performSegue(withIdentifier: "submitRegistration", sender: nil)
     }
