@@ -25,6 +25,12 @@ class Constants {
         static let usernameEntry: String = "&entry.2039457445="
         static let url: String = "https://docs.google.com/a/castilleja.org/forms/d/e/1FAIpQLSf3eqWNn3VcSl2agC3d1A2oP_GZ7lFyglIL6_0qjk3Ia30rPA/formResponse"
         static var inOrOut: String = "Out"
+        
+        static let firstNameEntryT: String = "entry.188532641="
+        static let lastNameEntryT: String = "&entry.1516486124="
+        static let inoroutEntryT: String = "&entry.2061610398="
+        static let locationEntryT: String = "&entry.160067402="
+        static let urlT: String = "https://docs.google.com/a/castilleja.org/forms/d/e/1FAIpQLScd2OZxRNowVhrPWOG95r8zvvBV_TRPUUFA1JcZqCgBkxWr4g/formResponse"
     }
     
     struct Notifications {
