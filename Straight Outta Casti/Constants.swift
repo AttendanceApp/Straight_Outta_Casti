@@ -18,12 +18,15 @@ class Constants {
     
     struct GoogleForms {
         //add your strings for Google Forms here so that they're easy to access and change centrally
-        static let firstNameEntry: String = "entry.969444259="
-        static let lastNameEntry: String = "&entry.30603988="
-        static let inoroutEntry: String = "&entry.1033565684="
-        static let reasonEntry: String = "&entry.480295091="
-        static let usernameEntry: String = "&entry.2039457445="
-        static let url: String = "https://docs.google.com/a/castilleja.org/forms/d/e/1FAIpQLSf3eqWNn3VcSl2agC3d1A2oP_GZ7lFyglIL6_0qjk3Ia30rPA/formResponse"
+        //For example:
+        static let firstNameEntryS: String = "entry.304670658="
+        static let lastNameEntryS: String = "&entry.1819543685="
+        static let inoroutEntryS: String = "&entry.1808342387="
+        static let reasonEntryS: String = "&entry.1668998790="
+        static let locationEntryS: String = "&entry.897415235="
+        static let urlS: String = "https://docs.google.com/a/castilleja.org/forms/d/e/1FAIpQLSfdVxrppBDLSBQIUbHfYrvdUBIgOI7lRrIZits5K8ie8aac8g/formResponse"
+       
+        // set default for in or out as out :)
         static var inOrOut: String = "Out"
         
         static let firstNameEntryT: String = "entry.188532641="
