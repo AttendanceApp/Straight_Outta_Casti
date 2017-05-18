@@ -13,7 +13,7 @@ class Constants {
     struct Geolocation {
         static let castiLatitude: Double = 37.4385029264143
         static let castiLongitude: Double = -122.151743983964
-        static let deadband: Double = 1
+        static let deadband: Double = 0.001
     }
     
     struct GoogleForms {
