@@ -11,18 +11,21 @@ import Foundation
 struct Account {
     let firstName: String
     let lastName: String
+    let teacher: Bool
 }
 
 extension Account {
     var plistRepresentation: [String: AnyObject] {
         return [
             "firstName": firstName as AnyObject,
-            "lastName": lastName as AnyObject
+            "lastName": lastName as AnyObject,
+            "teacher?": teacher as AnyObject
         ]
     }
     
     init (plist: [String: AnyObject]) {
         firstName = plist["firstName"] as! String
         lastName = plist["lastName"] as! String
+        teacher = plist["teacher?"] as! Bool
     }
 }

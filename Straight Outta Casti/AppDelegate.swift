@@ -17,6 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
     let stateController = StateController(accountStorage: AccountStorage())
+    let geofence: Geofence = Geofence(deadband: Constants.Geolocation.deadband, targetLatitude: Constants.Geolocation.castiLatitude, targetLongitude: Constants.Geolocation.castiLongitude)
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         //MARK: Configure Firebase
@@ -36,6 +37,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         } else {
             let signOutController = storyboard.instantiateViewController(withIdentifier: "OutViewController") as! OutViewController
             signOutController.stateController = self.stateController
+            signOutController.geofence = self.geofence
             self.window?.makeKeyAndVisible()
             self.window?.rootViewController = signOutController
         }
