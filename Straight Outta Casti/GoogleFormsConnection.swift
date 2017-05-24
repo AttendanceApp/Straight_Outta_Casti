@@ -18,7 +18,7 @@ class GoogleFormsConnection {
         var namesString: String!
         var outString: String!
         var reasonString: String!
-        var fieldsToPost: NSString!
+        var fieldsToPost: String!
         var locationString: String!
         let session = URLSession(configuration: URLSessionConfiguration.default)
         if teacher {
@@ -26,21 +26,21 @@ class GoogleFormsConnection {
             namesString = Constants.GoogleForms.firstNameEntryT + firstName + Constants.GoogleForms.lastNameEntryT + lastName
             outString = Constants.GoogleForms.inoroutEntryT + Constants.GoogleForms.inOrOut
             locationString =  Constants.GoogleForms.locationEntryT + "Straight Outta Casti"
-            fieldsToPost = namesString! + outString! + locationString! as NSString
+            fieldsToPost = namesString! + outString! + locationString! as String
         } else {
             myURL = NSURL(string: Constants.GoogleForms.urlS)
             namesString = Constants.GoogleForms.firstNameEntryS + firstName + Constants.GoogleForms.lastNameEntryS + lastName
             outString = Constants.GoogleForms.inoroutEntryS + Constants.GoogleForms.inOrOut
             reasonString = Constants.GoogleForms.reasonEntryS + reason
             locationString =  Constants.GoogleForms.locationEntryS + "Straight Outta Casti"
-            fieldsToPost = namesString! + outString! + reasonString! + locationString! as NSString
+            fieldsToPost = namesString! + outString! + reasonString! + locationString! as String
         }
         var request = URLRequest(url:myURL! as URL)
         request.httpMethod = "POST"
         
         request.setValue("application/x-www-form-urlencoded; charset=utf-8", forHTTPHeaderField: "Content-Type")
         
-        request.httpBody = fieldsToPost.data(using: String.Encoding.utf8.rawValue)
+        request.httpBody = fieldsToPost.data(using: String.Encoding(rawValue: String.Encoding.utf8.rawValue))
         
         let task = session.dataTask(with: request as URLRequest) {
             (data, response, error) in
