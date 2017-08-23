@@ -26,15 +26,15 @@ class GoogleFormsConnection {
             namesString = Constants.GoogleForms.firstNameEntryT + firstName + Constants.GoogleForms.lastNameEntryT + lastName
             outString = Constants.GoogleForms.inoroutEntryT + Constants.GoogleForms.inOrOut
             locationString =  Constants.GoogleForms.locationEntryT + "Straight Outta Casti"
-            fieldsToPost = namesString! + outString! + locationString! as NSString
+            reasonString = Constants.GoogleForms.reasonEntryT + reason
         } else {
             myURL = NSURL(string: Constants.GoogleForms.urlS)
             namesString = Constants.GoogleForms.firstNameEntryS + firstName + Constants.GoogleForms.lastNameEntryS + lastName
             outString = Constants.GoogleForms.inoroutEntryS + Constants.GoogleForms.inOrOut
             reasonString = Constants.GoogleForms.reasonEntryS + reason
             locationString =  Constants.GoogleForms.locationEntryS + "Straight Outta Casti"
-            fieldsToPost = namesString! + outString! + reasonString! + locationString! as NSString
         }
+        fieldsToPost = namesString! + outString! + reasonString! + locationString! as NSString
         var request = URLRequest(url:myURL! as URL)
         request.httpMethod = "POST"
         
