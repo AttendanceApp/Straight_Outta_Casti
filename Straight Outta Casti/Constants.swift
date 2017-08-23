@@ -30,8 +30,10 @@ class Constants {
         static let firstNameEntryT: String = "entry.188532641="
         static let lastNameEntryT: String = "&entry.1516486124="
         static let inoroutEntryT: String = "&entry.2061610398="
+        static let reasonEntryT: String = "&entry.1855699008="
         static let locationEntryT: String = "&entry.160067402="
         static let urlT: String = "https://docs.google.com/a/castilleja.org/forms/d/e/1FAIpQLScd2OZxRNowVhrPWOG95r8zvvBV_TRPUUFA1JcZqCgBkxWr4g/formResponse"
+        //"https://docs.google.com/a/castilleja.org/forms/d/e/1FAIpQLScd2OZxRNowVhrPWOG95r8zvvBV_TRPUUFA1JcZqCgBkxWr4g/formResponse"
         
         //MARK: Defaults
         static var inOrOut: String = "Out"
