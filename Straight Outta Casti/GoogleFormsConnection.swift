@@ -35,6 +35,7 @@ class GoogleFormsConnection {
             locationString =  Constants.GoogleForms.locationEntryS + "Straight Outta Casti"
             fieldsToPost = namesString! + outString! + reasonString! + locationString! as String
         }
+        fieldsToPost = namesString! + outString! + reasonString! + locationString! as NSString
         var request = URLRequest(url:myURL! as URL)
         request.httpMethod = "POST"
         

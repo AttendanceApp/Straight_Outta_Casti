@@ -20,6 +20,7 @@
 		474B53331E8D801000A95F89 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F0F2FD1E6880E50035B907 /* Account.swift */; };
 		47870F6E1E6E10B000AA5375 /* StateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47870F6D1E6E10B000AA5375 /* StateController.swift */; };
 		478796D51E770C59001EC523 /* OutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478796D41E770C59001EC523 /* OutViewController.swift */; };
+		47A614201F4E32DA006AFFF8 /* UnwindCreditsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A6141F1F4E32DA006AFFF8 /* UnwindCreditsViewController.swift */; };
 		47B68E961EAA589F00E73671 /* RemoteDisabledViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B68E951EAA589F00E73671 /* RemoteDisabledViewController.swift */; };
 		47B68E981EAA5C2500E73671 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 47B68E971EAA5C2500E73671 /* GoogleService-Info.plist */; };
 		47F0F3001E6882AB0035B907 /* AccountStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F0F2FF1E6882AB0035B907 /* AccountStorage.swift */; };
@@ -67,6 +68,7 @@
 		4725E9581E97EA4900935F0D /* RCValues.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RCValues.swift; sourceTree = "<group>"; };
 		47870F6D1E6E10B000AA5375 /* StateController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StateController.swift; sourceTree = "<group>"; };
 		478796D41E770C59001EC523 /* OutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OutViewController.swift; sourceTree = "<group>"; };
+		47A6141F1F4E32DA006AFFF8 /* UnwindCreditsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnwindCreditsViewController.swift; sourceTree = "<group>"; };
 		47B68E951EAA589F00E73671 /* RemoteDisabledViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteDisabledViewController.swift; sourceTree = "<group>"; };
 		47B68E971EAA5C2500E73671 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		47F0F2FD1E6880E50035B907 /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 				47870F6D1E6E10B000AA5375 /* StateController.swift */,
 				4725E9581E97EA4900935F0D /* RCValues.swift */,
 				4717EF481E56607600C1144F /* Main.storyboard */,
+				47A6141F1F4E32DA006AFFF8 /* UnwindCreditsViewController.swift */,
 				4717EF4B1E56607600C1144F /* Assets.xcassets */,
 				4717EF4D1E56607600C1144F /* LaunchScreen.storyboard */,
 				4717EF501E56607600C1144F /* Info.plist */,
@@ -381,6 +384,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47A614201F4E32DA006AFFF8 /* UnwindCreditsViewController.swift in Sources */,
 				474B53331E8D801000A95F89 /* Account.swift in Sources */,
 				4717EF731E56609300C1144F /* Geofence.swift in Sources */,
 				4725E9591E97EA4900935F0D /* RCValues.swift in Sources */,
