@@ -43,7 +43,7 @@ class OutViewController: UIViewController, UITextFieldDelegate {
             thumba.updateUI(outViewController: self)
             doneButton.isHidden = true
         } else if (!geofence.inCasti) {
-           showAlert(title: "Sign Out Not Allowed", message: "You may not sign out if not on campus. Please email Ms. Campbell if you have left campus without signing out.", actions: defaultOkAction, image: nil)
+           showAlert(title: "Sign Out Not Allowed", message: "You may not sign out if not on campus. Please email Ms. Camarena if you have left campus without signing out.", actions: defaultOkAction, image: nil)
         } else {
             showAlert(title: "Empty Reason", message: "Please enter a reason to sign out.", actions: defaultOkAction, image: nil)
         }
