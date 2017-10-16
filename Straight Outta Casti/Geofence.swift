@@ -35,8 +35,9 @@ class Geofence: NSObject, CLLocationManagerDelegate {
         let currentLongitude = locations[locations.count-1].coordinate.longitude
         print ("Latitude:", abs(currentLatitude - targetLatitude))
         print ("Longitude:", abs(currentLongitude - targetLongitude))
-        print ()
         inCasti = ((abs(currentLatitude - targetLatitude) <= deadband) && (abs(currentLongitude - targetLongitude)-0.0005 <= deadband))
+        print("InCasti=",inCasti)
+        print ()
     }
     
 }

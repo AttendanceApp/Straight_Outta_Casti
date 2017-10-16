@@ -26,8 +26,7 @@ class RCValues {
     }
     
     func fetchCloudValues() {
-        let fetchDuration: TimeInterval = 0
-        activateDebugMode()
+        let fetchDuration: TimeInterval = 300
         FIRRemoteConfig.remoteConfig().fetch(withExpirationDuration: fetchDuration) {
             [weak self] (status, error) in
             

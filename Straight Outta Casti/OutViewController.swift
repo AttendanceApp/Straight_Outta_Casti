@@ -40,12 +40,27 @@ class OutViewController: UIViewController, UITextFieldDelegate {
     @IBAction func done(_ sender: UIButton) {
         if (reason.text != nil && geofence.inCasti) {
             thumba.setupController()
-            thumba.updateUI(outViewController: self)
+            let account = self.stateController.get()
+            let success: Bool = thumba.updateUI(firstName: account.firstName, lastName: account.lastName, reason: reason.text!, teacher: account.teacher)
             doneButton.isHidden = true
+            if (success) {
+            //present the alert
+                Utils.showAlert(
+                    title: "Sign " + Constants.GoogleForms.inOrOut + " Successful",
+                    message: "Your sign " + Constants.GoogleForms.inOrOut + " was successful!",
+                    actions: [
+                        UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil)
+                    ],
+                    image: UIImage(named: "Checkmark"),
+                    controller: self
+                )
+            } else {
+                Utils.showAlert(title: "FAILURE!!!", message: "You are a failure.", actions: [UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil)], image: nil, controller: self)
+            }
         } else if (!geofence.inCasti) {
-           showAlert(title: "Sign Out Not Allowed", message: "You may not sign out if not on campus. Please email Ms. Campbell if you have left campus without signing out.", actions: defaultOkAction, image: nil)
+            Utils.showAlert(title: "Sign Out Not Allowed", message: "You may not sign out if not on campus. Please email Ms. Campbell if you have left campus without signing out.", actions: defaultOkAction, image: nil, controller:self)
         } else {
-            showAlert(title: "Empty Reason", message: "Please enter a reason to sign out.", actions: defaultOkAction, image: nil)
+            Utils.showAlert(title: "Empty Reason", message: "Please enter a reason to sign out.", actions: defaultOkAction, image: nil,controller:self)
         }
     }
     
@@ -53,25 +68,7 @@ class OutViewController: UIViewController, UITextFieldDelegate {
         inOutLabel.text = "Sign " + inOutList[sender.selectedSegmentIndex]
         Constants.GoogleForms.inOrOut = inOutList[sender.selectedSegmentIndex]
     }
-    
-    
-    func showAlert(title: String, message: String, actions: [UIAlertAction], image: UIImage?) {
-        // set up the alert
-        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
-        if (image != nil) {
-            let imageView = UIImageView(frame: CGRect(x: 3, y: 3, width: 40, height: 40))
-            imageView.image = image
-            alert.view.addSubview(imageView)
-        }
-        
-        // add the actions
-        for action in actions {
-            alert.addAction(action)
-        }
-        
-        // show the alert
-        self.present(alert, animated: true, completion: nil)
-    }
+
     
     //MARK: Keyboard Handling
     func hideKeyboardWhenTappedAround() {
@@ -79,7 +76,7 @@ class OutViewController: UIViewController, UITextFieldDelegate {
         view.addGestureRecognizer(tap)
     }
     
-    func dismissKeyboard() {
+    @objc func dismissKeyboard() {
         view.endEditing(true)
         if reason.text != "" {
             doneButton.isHidden = false

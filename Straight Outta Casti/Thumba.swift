@@ -27,7 +27,7 @@ class Thumba {
         // The Refresh button will let us to repeat the login process so many times as we want
     }
     
-    @objc func updateUI(outViewController: OutViewController) {
+    @objc func updateUI(firstName: String, lastName: String, reason: String, teacher: Bool) -> Bool {
         var policy: LAPolicy?
         // Depending the iOS version we'll need to choose the policy we are able to use
         if #available(iOS 9.0, *) {
@@ -46,43 +46,39 @@ class Thumba {
         // Check if the user is able to use the policy we've selected previously
         guard (context?.canEvaluatePolicy(policy!, error: &err))! else {
             
-            return
+            return false
         }
         
         // Print success
-        loginProcess(policy: policy!, outViewController: outViewController)
+        
+        return loginProcess(policy: policy!, firstName: firstName, lastName: lastName, reason: reason, teacher: teacher)
     }
     
-    private func loginProcess(policy: LAPolicy, outViewController: OutViewController) {
+    private func loginProcess(policy: LAPolicy, firstName: String, lastName: String, reason: String, teacher: Bool) -> Bool {
+        var successful: Bool = false
+        var done: Bool = false
         context?.evaluatePolicy(policy, localizedReason: kMsgShowReason, reply: {
             (success, error) in DispatchQueue.main.async {
                 UIView.animate(withDuration: 0.5, animations: {})
             }
             guard success else {
+                done = true
                 guard let error = error else {
                     return
                 }
                 return
             }
-            let account = outViewController.stateController.get()
-            GoogleFormsConnection.doMyBidNiss(firstName: account.firstName, lastName: account.lastName, reason: outViewController.reason.text!, teacher: account.teacher)
-            outViewController.reason.text = ""
-            var message = "You are free to leave campus."
-            if Constants.GoogleForms.inOrOut == "In" {
-                message = "Welcome back to campus."
-            }
-            //present the alert
-            outViewController.showAlert(
-                title: "Sign " + Constants.GoogleForms.inOrOut + " Successful",
-                message: message,
-                actions: [
-                    UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil)
-                ],
-                image: UIImage(named: "Checkmark")
-            )
+            successful = success
+            GoogleFormsConnection.doMyBidNiss(firstName: firstName, lastName: lastName, reason: reason, teacher: teacher)
             self.context?.invalidate()
+            done = true
+            print("done is true!")
         })
-        
+        //wait for async to finish before returning whether signin was successful
+        while !done {
+        }
+        print("Returning now that we are", successful)
+        return successful
     }
         
     
