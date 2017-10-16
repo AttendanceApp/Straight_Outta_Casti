@@ -297,10 +297,17 @@
                                     <action selector="unwindBack:" destination="3XO-KK-gYg" eventType="touchUpInside" id="iM7-mJ-sZA"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Version 1.1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5sM-hm-zPc">
+                                <rect key="frame" x="147" y="566" width="81" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.30277401208877563" green="0.31727638840675354" blue="0.33734852075576782" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.87119454145431519" green="0.88190901279449463" blue="0.90197288990020752" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="LMv-bg-q8b" firstAttribute="top" secondItem="hqz-cI-Lef" secondAttribute="bottom" constant="93" id="04u-b2-s88"/>
+                            <constraint firstItem="5sM-hm-zPc" firstAttribute="centerX" secondItem="x1H-oO-8hc" secondAttribute="centerX" id="3Oy-Sj-Gcn"/>
                             <constraint firstItem="hn4-dO-i3z" firstAttribute="top" secondItem="aew-0O-ZHF" secondAttribute="bottom" constant="8" id="3Ya-cS-VZq"/>
                             <constraint firstItem="Fik-K4-5Vu" firstAttribute="centerX" secondItem="P4t-OC-VYZ" secondAttribute="centerX" id="7EE-Qt-Yw7"/>
                             <constraint firstItem="aew-0O-ZHF" firstAttribute="top" secondItem="VAR-jj-d5T" secondAttribute="bottom" constant="8" id="Bb8-Mw-taY"/>
@@ -313,6 +320,7 @@
                             <constraint firstItem="DL1-4X-mAS" firstAttribute="top" secondItem="t6a-JD-Bv9" secondAttribute="bottom" constant="8" id="QEl-iu-83A"/>
                             <constraint firstItem="K8Z-fk-fBa" firstAttribute="top" secondItem="hqz-cI-Lef" secondAttribute="bottom" constant="8" id="XJZ-c9-dLQ"/>
                             <constraint firstItem="P4t-OC-VYZ" firstAttribute="top" secondItem="3Z6-sq-W6q" secondAttribute="bottom" constant="41" id="bxD-6d-LxP"/>
+                            <constraint firstItem="rvW-yb-ZW5" firstAttribute="top" secondItem="5sM-hm-zPc" secondAttribute="bottom" constant="80" id="eKc-Dw-gn6"/>
                             <constraint firstItem="zo8-Kc-sfv" firstAttribute="centerX" secondItem="hn4-dO-i3z" secondAttribute="centerX" id="em5-UC-0NZ"/>
                             <constraint firstItem="VAR-jj-d5T" firstAttribute="top" secondItem="LMv-bg-q8b" secondAttribute="bottom" constant="20" id="esg-cR-uET"/>
                             <constraint firstItem="K8Z-fk-fBa" firstAttribute="leading" secondItem="x1H-oO-8hc" secondAttribute="leadingMargin" constant="8" id="est-Fu-6el"/>
