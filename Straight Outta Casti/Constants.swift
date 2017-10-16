@@ -40,7 +40,7 @@ class Constants {
     }
     
     struct Remote {
-        static let thisVersion = 1.0
-        static var latestVersion = 1.0
+        static let thisVersion = 1.1
+        static var latestVersion = 1.1
     }
 }
