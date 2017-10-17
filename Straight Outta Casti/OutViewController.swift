@@ -58,7 +58,7 @@ class OutViewController: UIViewController, UITextFieldDelegate {
                 Utils.showAlert(title: "FAILURE!!!", message: "You are a failure.", actions: [UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil)], image: nil, controller: self)
             }
         } else if (!geofence.inCasti) {
-            Utils.showAlert(title: "Sign Out Not Allowed", message: "You may not sign out if not on campus. Please email Ms. Campbell if you have left campus without signing out.", actions: defaultOkAction, image: nil, controller:self)
+            Utils.showAlert(title: "Sign Out Not Allowed", message: "You may not sign out if not on campus. Please email Ms. Camarena if you have left campus without signing out.", actions: defaultOkAction, image: nil, controller:self)
         } else {
             Utils.showAlert(title: "Empty Reason", message: "Please enter a reason to sign out.", actions: defaultOkAction, image: nil,controller:self)
         }
